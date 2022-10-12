@@ -1,5 +1,9 @@
 INDEX VERSION 1.131
 C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2330781168.index
 \Jsp_tutorial\src\main\java
+C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\276318937.index
+\NetflixManager\src\main\java
+C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1586587267.index
+\NetflixManager\src\main\java
 C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1191640465.index
 \JSP_Tutorial\src\main\java
