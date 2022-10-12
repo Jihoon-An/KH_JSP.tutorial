@@ -31,10 +31,11 @@
                     background-color: rgb(22, 22, 22);
                 }
 
-                .table{
+                .table {
                     color: white;
                 }
-                #list{
+
+                #list {
                     overflow-y: scroll;
                     max-height: 500px;
                 }
@@ -81,7 +82,8 @@
                     <!-- Search -->
                     <form action="SearchTitleServlet" class="row justify-content-start mt-2">
                         <div class="col-5 text-white">
-                            <input type="text" class="form-control" placeholder="title of movie for search" name="title">
+                            <input type="text" class="form-control" placeholder="title of movie for search"
+                                name="title">
                         </div>
                         <div class="col-1">
                             <button class="btn btn-dark text-center">Search</button>
@@ -104,12 +106,21 @@
                     <div id="list">
                         <table class="table">
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
+                                <c:choose>
+                                    <c:when test="${not empty list }">
+                                        <c:forEach var="i" items="${list }">
+                                            <tr>
+                                                <td>${i.id}</td>
+                                                <td>${i.title}</td>
+                                                <td>${i.category}</td>
+                                                <td>${i.launch_time}</td>
+                                            </tr>
+                                        </c:forEach>
+                                    </c:when>
+                                    <c:otherwise>
+                                        출력할 내용이 없습니다.
+                                    </c:otherwise>
+                                </c:choose>
                             </tbody>
                         </table>
                     </div>
