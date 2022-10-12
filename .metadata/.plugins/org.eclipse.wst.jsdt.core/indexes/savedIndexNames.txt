@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3644557524.index
