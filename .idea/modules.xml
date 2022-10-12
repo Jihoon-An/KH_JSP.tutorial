@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" filepath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" />
       <module fileurl="file://$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" filepath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetflixManager/NetflixManager.iml" filepath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/Servers/Servers.iml" filepath="$PROJECT_DIR$/Servers/Servers.iml" />
     </modules>
   </component>
