@@ -21,5 +21,6 @@
     <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.module.container" level="application" />
     <orderEntry type="library" name="javax.servlet-api-3.1.0" level="application" />
     <orderEntry type="library" name="ojdbc6" level="project" />
+    <orderEntry type="library" name="commons-dbcp2-2.1.1" level="project" />
   </component>
 </module>

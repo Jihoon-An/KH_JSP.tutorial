@@ -152,7 +152,19 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\Jsp_tutorial" path="" reloadable="true" source="org.eclipse.jst.jee.server:Jsp_tutorial"/></Host>
+      <Context docBase="C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\NetflixManager" path="" reloadable="true" source="org.eclipse.jst.jee.server:NetflixManager">
+
+    <!-- Default set of monitored resources. If one of these changes, the    -->
+    <!-- web application will be reloaded.                                   -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+
+    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+    <!--
+    <Manager pathname="" />
+    -->
+    <Resource auth="container" driverClassName="oracle.jdbc.driver.OracleDriver" name="jdbc/oracle" password="kh" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="kh"/>
+</Context></Host>
     </Engine>
   </Service>
 </Server>

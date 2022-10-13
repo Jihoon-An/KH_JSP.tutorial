@@ -7,10 +7,16 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+//import org.apache.commons.dbcp2.BasicDataSource;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class MoviesDAO {
-    private String dbID = "kh";
-    private String dbPW = "kh";
-    private String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
+//    private String dbID = "kh";
+//    private String dbPW = "kh";
+//    private String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
 
     private static MoviesDAO instance = null;
 
@@ -22,14 +28,17 @@ public class MoviesDAO {
     }
 
     private MoviesDAO() throws Exception {
-        Class.forName("oracle.jdbc.driver.OracleDriver");
+//        this.bds.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+//        this.bds.setUsername("kh");
+//        this.bds.setPassword("kh");
+//        this.bds.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+//        this.bds.setInitialSize(30);
     }
-
+//    private BasicDataSource bds = new BasicDataSource();
     private Connection getConnection() throws Exception {
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
-        String id = "kh";
-        String pw = "kh";
-        return DriverManager.getConnection(url, id, pw);
+        Context ctx = new InitialContext();
+        DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/oracle");
+        return ds.getConnection();
     }
 
     //insert
