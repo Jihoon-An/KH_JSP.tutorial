@@ -9,7 +9,6 @@ INDEX VERSION 1.131+C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.ecl
 192074650.index
 860208974.index
 3644557524.index
-4130863490.index
 1329501613.index
 1759534978.index
 3881777827.index
@@ -31,7 +30,6 @@ INDEX VERSION 1.131+C:\study\KH\Back\Java\servlet-jsp\.metadata\.plugins\org.ecl
 2207309561.index
 1843698340.index
 333818428.index
-3116698359.index
 1634749093.index
 455315795.index
 1865797976.index

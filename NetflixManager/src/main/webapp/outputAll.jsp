@@ -89,6 +89,9 @@
                         <div class="col-1">
                             <button class="btn btn-dark text-center">Search</button>
                         </div>
+                        <div class="col-1">
+                            <a href="outputAll.movie"><button type=button class="btn btn-dark text-center">Revert</button></a>
+                        </div>
                     </form>
                 </div>
                 <div class="list">
