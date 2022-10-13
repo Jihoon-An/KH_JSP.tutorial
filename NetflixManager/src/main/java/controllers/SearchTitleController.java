@@ -1,4 +1,4 @@
-package servlets;
+package controllers;
 
 import dao.MoviesDAO;
 import dto.MoviesDTO;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/SearchTitleServlet")
-public class SearchTitleServlet extends HttpServlet {
+@WebServlet("/SearchTitleController")
+public class SearchTitleController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

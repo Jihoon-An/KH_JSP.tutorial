@@ -1,5 +1,6 @@
-package servlets;
+package controllers;
 
+import commons.Timeutils;
 import dao.MoviesDAO;
 
 import javax.servlet.ServletException;
@@ -9,16 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/DeleteServlet")
-public class DeleteServlet extends HttpServlet {
+@WebServlet("/InsertController")
+public class InsertController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int seq = Integer.parseInt(request.getParameter("delSeq"));
+		String title = request.getParameter("title");
+		String genre = request.getParameter("genre");
+		String date = request.getParameter("launch_date");
 
 		try {
 			MoviesDAO dao = MoviesDAO.getInstance();
-			dao.delete(seq);
-			response.sendRedirect("OutputAllServlet");
+			dao.insert(title, genre, Timeutils.stringToTimestamp(date));
+			response.sendRedirect("OutputAllController");
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.sendRedirect("error.jsp");

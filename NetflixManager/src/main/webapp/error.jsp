@@ -33,10 +33,6 @@
         </head>
 
         <body>
-            <form action="index.jsp" style="position:fixed; top:1%; left:3%">
-                <button class="btn btn-dark text-center">Main menu</button>
-            </form>
-
             <div class="container">
                 <div class="header">
                     <div class="row">

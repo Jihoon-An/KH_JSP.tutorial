@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/commons/Timeutils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/servlets/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/servlets/Exam01.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/Exam01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/servlets/OutputServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/OutputServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/servlets/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/UpdateServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/OutputAllServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/OutputAllServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/SearchTitleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/SearchTitleServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/DeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/InsertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/InsertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/OutputAllServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/OutputAllController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/SearchTitleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/SearchTitleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/UpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/UpdateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/outputAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/outputAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

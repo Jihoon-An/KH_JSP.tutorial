@@ -33,13 +33,14 @@ public class MoviesDAO {
     }
 
     //insert
-    public int insert(String title, String genre) throws Exception {
-        String sql = "insert into movies values(id_seq.nextval, ?, ?, sysdate)";
+    public int insert(String title, String genre, Timestamp launch_date) throws Exception {
+        String sql = "insert into movies values(id_seq.nextval, ?, ?, ?)";
 
         try (Connection con = this.getConnection();
              PreparedStatement pstat = con.prepareStatement(sql);) {
             pstat.setString(1, title);
             pstat.setString(2, genre);
+            pstat.setTimestamp(3, launch_date);
 
             int result = pstat.executeUpdate();
             return result;
@@ -77,7 +78,7 @@ public class MoviesDAO {
                     String title = sqlResult.getString("title");
                     String genre = sqlResult.getString("genre");
                     Timestamp time = sqlResult.getTimestamp("launch_date");
-                    String launch_date = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(time);
+                    String launch_date = new SimpleDateFormat("yyyy.MM.dd").format(time);
                     outList.add(new MoviesDTO(id, title, genre, launch_date));
                 }
                 return outList;
@@ -101,7 +102,7 @@ public class MoviesDAO {
                     String title = sqlResult.getString("title");
                     String genre = sqlResult.getString("genre");
                     Timestamp time = sqlResult.getTimestamp("launch_date");
-                    String launch_date = new SimpleDateFormat("yyyy.MM.dd.HH.mm").format(time);
+                    String launch_date = new SimpleDateFormat("yyyy.MM.dd").format(time);
                     outList.add(new MoviesDTO(id, title, genre, launch_date));
                 }
                 return outList;
