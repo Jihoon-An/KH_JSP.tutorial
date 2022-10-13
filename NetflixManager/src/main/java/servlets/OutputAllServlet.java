@@ -18,7 +18,7 @@ public class OutputAllServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             MoviesDAO dao = MoviesDAO.getInstance();
-            ArrayList<MoviesDTO> list = dao.viewAll();
+            List<MoviesDTO> list = dao.viewAll();
 
             request.setAttribute("list", list);
             request.getRequestDispatcher("outputAll.jsp").forward(request, response);

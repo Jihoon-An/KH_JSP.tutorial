@@ -2,10 +2,10 @@ package dao;
 
 import dto.MoviesDTO;
 
-import javax.servlet.annotation.WebServlet;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MoviesDAO {
     private String dbID = "kh";
@@ -34,18 +34,14 @@ public class MoviesDAO {
 
     //insert
     public int insert(String title, String genre) throws Exception {
-        String sql = "insert into movies values(id.nextval, ?, ?, sysdate)";
+        String sql = "insert into movies values(id_seq.nextval, ?, ?, sysdate)";
 
         try (Connection con = this.getConnection();
              PreparedStatement pstat = con.prepareStatement(sql);) {
-
             pstat.setString(1, title);
             pstat.setString(2, genre);
 
             int result = pstat.executeUpdate();
-
-            con.commit();
-
             return result;
         }
     }
@@ -68,9 +64,9 @@ public class MoviesDAO {
     }
 
     //view all
-    public ArrayList<MoviesDTO> viewAll() throws Exception {
-        String sql = "select * from movies where title like ? order by 1";
-        ArrayList<MoviesDTO> outList = new ArrayList<>();
+    public List<MoviesDTO> viewAll() throws Exception {
+        String sql = "select * from movies order by 1";
+        List<MoviesDTO> outList = new ArrayList<>();
         try (Connection con = this.getConnection();
              PreparedStatement pstat = con.prepareStatement(sql);) {
             try (
@@ -90,9 +86,9 @@ public class MoviesDAO {
     }
 
     //search
-    public ArrayList<MoviesDTO> search(String searchTitle) throws Exception {
+    public List<MoviesDTO> search(String searchTitle) throws Exception {
         String sql = "select * from movies where title like ? order by 1";
-        ArrayList<MoviesDTO> outList = new ArrayList<>();
+        List<MoviesDTO> outList = new ArrayList<>();
         try (
                 Connection con = getConnection();
                 PreparedStatement statement = con.prepareStatement(sql);) {

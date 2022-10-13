@@ -2,53 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/dto/MoviesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/DeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/InsertServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/SearchTitleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/UpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/1f/705099bdf549001d14c6f43f72862c22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/36/70fd91bdf549001d14c6f43f72862c22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/54/30d293bdf549001d14c6f43f72862c22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/84/304396bdf549001d14c6f43f72862c22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/d8/c0a297bdf549001d14c6f43f72862c22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.markers.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.syncinfo.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Jsp_tutorial/.markers.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Jsp_tutorial/.syncinfo.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.markers.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.syncinfo.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/0.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/285219149.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/participantsIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/participantsIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jst.j2ee.web/webLibrariesCache.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jst.j2ee.web/webLibrariesCache.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Jsp_tutorial/2022/10/42/refactorings.history" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Jsp_tutorial/2022/10/42/refactorings.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Jsp_tutorial/2022/10/42/refactorings.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Jsp_tutorial/2022/10/42/refactorings.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/OutputAllServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/OutputAllServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/SearchTitleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/servlets/SearchTitleServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/outputAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/outputAll.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +53,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/NetflixManager/src/main/webapp" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../library/ojdbc/ojdbc6.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />

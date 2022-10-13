@@ -29,6 +29,7 @@
 
                 .form-control {
                     background-color: rgb(22, 22, 22);
+                    color:white;
                 }
 
                 .table {
@@ -107,12 +108,12 @@
                         <table class="table">
                             <tbody>
                                 <c:choose>
-                                    <c:when test="${not empty list }">
-                                        <c:forEach var="i" items="${list }">
+                                    <c:when test="${not empty list}">
+                                        <c:forEach var="i" items="${list}">
                                             <tr>
                                                 <td>${i.id}</td>
                                                 <td>${i.title}</td>
-                                                <td>${i.category}</td>
+                                                <td>${i.genre}</td>
                                                 <td>${i.launch_time}</td>
                                             </tr>
                                         </c:forEach>

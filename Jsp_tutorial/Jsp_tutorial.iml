@@ -20,5 +20,6 @@
     <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.web.container" level="application" />
     <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.module.container" level="application" />
     <orderEntry type="library" name="javax.servlet-api-3.1.0" level="application" />
+    <orderEntry type="library" name="ojdbc6" level="project" />
   </component>
 </module>

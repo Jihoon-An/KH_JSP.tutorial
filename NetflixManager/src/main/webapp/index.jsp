@@ -28,6 +28,7 @@
                 }
                 .form-control{
                     background-color: rgb(22, 22, 22);
+                    color:white;
                 }
             </style>
         </head>
@@ -44,8 +45,8 @@
                         <form action="InsertServlet" class="row justify-content-center ">
                             <div class="col-4 text-end">
                                 <div class="row">
-                                    <input type="text" class="form-control" placeholder="title"><br>
-                                    <input type="text" class="form-control" placeholder="category">
+                                    <input type="text" class="form-control" placeholder="title" name="title"><br>
+                                    <input type="text" class="form-control" placeholder="category" name="genre">
                                 </div>
                             </div>
                             <div class="col-2 text-start position-relative">
