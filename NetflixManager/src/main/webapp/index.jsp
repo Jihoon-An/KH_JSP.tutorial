@@ -42,7 +42,7 @@
                 </div>
                 <div class="main">
                     <div>
-                        <form action="InsertController" class="row justify-content-center ">
+                        <form action="insert.movie" class="row justify-content-center ">
                             <div class="col-4 text-end">
                                 <div class="row">
                                     <input type="text" class="form-control" placeholder="title" name="title"><br>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="row justify-content-center mt-5">
                         <div class="col-2 text-white">
-                            <form action="OutputAllController">
+                            <form action="outputAll.movie">
                                 <button class="btn btn-dark text-center">Output All</button>
                             </form>
                         </div>

@@ -57,13 +57,13 @@ public class MoviesDAO {
     }
 
     //delete
-    public int delete(int id) throws Exception {
+    public int delete(int delId) throws Exception {
         String sql = "delete from movies where id = ?";
 
         try (Connection con = this.getConnection();
              PreparedStatement pstat = con.prepareStatement(sql);) {
 
-            pstat.setInt(1, id);
+            pstat.setInt(1, delId);
 
             int result = pstat.executeUpdate();
 

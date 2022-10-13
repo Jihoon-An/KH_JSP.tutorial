@@ -13,11 +13,11 @@ import java.io.IOException;
 public class DeleteController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int seq = Integer.parseInt(request.getParameter("delSeq"));
+		int delId = Integer.parseInt(request.getParameter("id"));
 
 		try {
 			MoviesDAO dao = MoviesDAO.getInstance();
-			dao.delete(seq);
+			dao.delete(delId);
 			response.sendRedirect("OutputAllController");
 		} catch (Exception e) {
 			e.printStackTrace();

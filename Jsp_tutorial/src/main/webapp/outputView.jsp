@@ -35,7 +35,7 @@
       </c:choose>
       <tr>
          <td colspan=3>
-            <form action="DeleteServlet">
+            <form action="delete.message">
                <input type=text name=delSeq placeholder="Input seq to delete">
                <button>Delete</button>
             </form>
@@ -43,7 +43,7 @@
       </tr>
       <tr>
          <td colspan=3>
-            <form action="UpdateServlet">
+            <form action="update.message">
                <input type=text name=seq placeholder="Input seq to modify"><br>
                <input type=text name=writer placeholder="Input writer to modify"><br>
                <input type=text name=message placeholder="Input message to modify">

@@ -9,30 +9,28 @@ import java.util.List;
 
 import dto.MessagesDTO;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class MessagesDAO {
-	
-	// Singleton Pattern ---------------------------------------------------------------------------------	
-	private static MessagesDAO instance;
-	
-	synchronized public static MessagesDAO getInstance() throws Exception{
-		if(instance == null ) {
+
+
+	private static MessagesDAO instance = null;
+
+	synchronized public static MessagesDAO getInstance() throws Exception {
+		if (instance == null) {
 			instance = new MessagesDAO();
 		}
 		return instance;
 	}
-	
-	// Driver ---------------------------------------------------------------------------------
-	private MessagesDAO() throws Exception {
-		Class.forName("oracle.jdbc.driver.OracleDriver");	
-	}
-	
-	
-	// Connection ---------------------------------------------------------------------------------
+
+	private MessagesDAO() throws Exception {}
+
 	private Connection getConnection() throws Exception {
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String id = "kh";
-		String pw = "kh";
-		return DriverManager.getConnection(url, id, pw);
+		Context ctx = new InitialContext();
+		DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/oracle");
+		return ds.getConnection();
 	}
 	
 	

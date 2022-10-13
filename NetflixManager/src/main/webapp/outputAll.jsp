@@ -56,7 +56,7 @@
                 <div class="menu">
                     <div>
                         <!-- Delete -->
-                        <form action="DeleteController" class="row justify-content-center mt-5">
+                        <form action="delete.movie" class="row justify-content-center mt-5">
                             <div class="col-5 text-white">
                                 <input type="text" class="form-control" placeholder="ID of movie for delete" name="id">
                             </div>
@@ -67,7 +67,7 @@
                     </div>
                     <div>
                         <!-- Modify -->
-                        <form action="UpdateController" class="row justify-content-center mt-2">
+                        <form action="update.movie" class="row justify-content-center mt-2">
                             <div class="col-5 text-white">
                                 <input type="text" class="form-control" placeholder="ID of movie for modify" name="id">
                                 <input type="text" class="form-control" placeholder="change title" name="title">
@@ -81,7 +81,7 @@
                 </div>
                 <div>
                     <!-- Search -->
-                    <form action="SearchTitleController" class="row justify-content-start mt-2">
+                    <form action="searchTitle.movie" class="row justify-content-start mt-2">
                         <div class="col-5 text-white">
                             <input type="text" class="form-control" placeholder="title of movie for search"
                                 name="title">

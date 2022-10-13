@@ -2,53 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_dbcp2_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/MoviesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/ae/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/ae/history.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3644557524.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3644557524.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jst.jsp.core/translators/3736769856.translator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/publish/publish1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/publish/publish1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/servers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/servers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/classes/dao/MessagesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/classes/dto/MessagesDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/classes/servlets/DeleteServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/classes/servlets/Exam01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/classes/servlets/OutputServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/classes/servlets/UpdateServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/WEB-INF/lib/ojdbc6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/inputForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/Jsp_tutorial/outputView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/servlets/DeleteServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/servlets/Exam01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/servlets/OutputServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/servlets/UpdateServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/Exam01.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/Exam01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/OutputServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/OutputServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/UpdateServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/UpdateServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/dao/MessagesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/dao/MessagesDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/dao/MessagesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/dao/MessagesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/inputForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/inputForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/outputView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/outputView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/controllers/DeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/java/dao/MoviesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetflixManager/src/main/webapp/outputAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/src/main/webapp/outputAll.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/NetflixManager/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/META-INF" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -100,6 +73,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\study\KH\Back\Java\servlet-jsp\Jsp_tutorial\src\main\webapp\META-INF" />
       <recent name="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\webapp\WEB-INF" />
       <recent name="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\webapp" />
       <recent name="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\java\servlets" />
@@ -109,6 +83,7 @@
       <recent name="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controllers" />
       <recent name="servlets" />
     </key>
   </component>
