@@ -25,7 +25,6 @@ public class MessagesController extends HttpServlet {
                 int result = dao.insert(writer, message);
 
                 response.sendRedirect("index.html");
-
             }
             if (uri.equals("/output.message")) {
 
