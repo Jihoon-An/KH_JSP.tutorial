@@ -57,9 +57,11 @@
                         <form action="signup.member" id="singupForm" method="post">
                             <script>
                                 var idCheck = false;
-                                let pwCheck = false;
-                                let nameCheck = false;
-                                let phoneCheck = false;
+                                var pwCheck = false;
+                                var nameCheck = false;
+                                var phoneCheck = true;
+                                var emailCheck = true;
+                                var addressCheck = true;
                             </script>
 
                             <div class="row">
@@ -67,6 +69,7 @@
                                     <div class="input-group mb-3">
                                         <span id="idHead" class="input-group-text col-3">아이디</span>
                                         <input name="id" id="id" type="text" class="form-control"
+                                            placeholder="(필수) 6~20자리 영어,숫자 ,중복확인 필수"
                                             aria-label="Amount (to the nearest dollar)">
                                         <button class="btn btn-outline-secondary" type="button" id="dupleCheck"
                                             onclick="idConfirm()">중복확인</button>
@@ -74,9 +77,18 @@
                                 </div>
                             </div>
                             <script>
+                                $("#id").on("keyup", function () {
+                                    idCheck = false;
+                                    if ($("#id").val() == "") {
+                                        $("#idHead").css("background-color", "azure");
+                                    } else{
+                                        $("#idHead").css("background-color", "rgb(60, 250, 89)");
+                                    }
+                                });
+
                                 function idConfirm() {
                                     if ($("#id").val() != "") {
-                                        if ($("#id").val().length >= 6 && $("#id").val().length <= 20) {
+                                        if (/^\w{6,20}$/.exec($("#id").val())) {
                                             console.log(idCheck);
                                             window.open("dupleCheck.member?id=" + $("#id").val(), "", "width=400, height=300")
                                             //idCheck = true;
@@ -84,7 +96,7 @@
                                         // 페이지를 열면서 데이터 전송.
                                         else {
                                             idCheck = false;
-                                            Swal.fire('아이디 길이 확인!')
+                                            Swal.fire('아이디 조건을 확인하세요!')
                                         }
                                     }
                                     else {
@@ -99,8 +111,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-3" id="pw1Head">비밀번호</span>
                                         <input name="pw1" id="pw1" type="password" class="form-control"
-                                            placeholder="password" aria-label="Username"
-                                            aria-describedby="basic-addon1">
+                                            placeholder="(필수)" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
                                 </div>
                             </div>
@@ -109,8 +120,7 @@
                                     <div class="input-group mb-3">
                                         <span class="input-group-text col-3" id="pw2Head">비밀번호:re</span>
                                         <input name="pw2" id="pw2" type="password" class="form-control"
-                                            placeholder="password confirm" aria-label="Username"
-                                            aria-describedby="basic-addon1">
+                                            placeholder="(필수)" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
                                 </div>
                             </div>
@@ -173,9 +183,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-3">이름</span>
+                                        <span class="input-group-text col-3" id="nameHead">이름</span>
                                         <input id="name" name="name" type="text" class="form-control"
-                                            aria-label="Username" aria-describedby="basic-addon1">
+                                            aria-label="Username" aria-describedby="basic-addon1" placeholder="(필수)">
                                     </div>
                                 </div>
                             </div>
@@ -185,8 +195,10 @@
                                 name.onkeyup = function () {
                                     if ($("#name").val() != null) {
                                         nameCheck = true;
+                                        $("#nameHead").css("background-color", "aqua");
                                     } else {
                                         nameCheck = false;
+                                        $("#nameHead").css("background-color", "red");
                                     }
                                 };
                             </script>
@@ -195,9 +207,26 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-3" id="basic-addon1">전화번호</span>
-                                        <input name="phone" type="text" class="form-control" aria-label="Username"
-                                            aria-describedby="basic-addon1">
+                                        <span class="input-group-text col-3" id="phoneHead">전화번호</span>
+                                        <input id="phone" name="phone" type="text" class="form-control"
+                                            aria-label="Username" aria-describedby="basic-addon1"
+                                            placeholder="(선택)'-' 없이 숫자 11자리 입력">
+                                        <script>
+                                            $("#phone").on("keyup", function () {
+                                                if ($("#phone").val() == "") {
+                                                    phoneCheck = true;
+                                                    $("#phoneHead").css("background-color", "azure");
+                                                }
+                                                else if (/^010\d{8}$/.exec($("#phone").val()) != null) {
+                                                    phoneCheck = true;
+                                                    $("#phoneHead").css("background-color", "aqua");
+                                                }
+                                                else {
+                                                    phoneCheck = false;
+                                                    $("#phoneHead").css("background-color", "red");
+                                                }
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -205,9 +234,29 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-3" id="basic-addon1">이메일</span>
-                                        <input name="email" type="text" class="form-control" aria-label="Username"
-                                            aria-describedby="basic-addon1">
+                                        <span class="input-group-text col-3" id="emailHead">이메일</span>
+                                        <input id="email" name="email" type="text" class="form-control"
+                                            aria-label="Username" aria-describedby="basic-addon1" placeholder="(선택)">
+                                        <script>
+                                            $("#email").on("keyup", function () {
+                                                let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                                                let emailResult = emailRegex.exec($("#email").val());
+                                                if ($("#email").val() == "") {
+                                                    emailCheck = true;
+                                                    $("#emailHead").css("background-color", "azure");
+                                                }
+                                                else if (emailResult != undefined) {
+                                                    console.log(emailResult[1]);
+                                                    emailCheck = true;
+                                                    $("#emailHead").css("background-color", "aqua");
+                                                }
+                                                else {
+                                                    console.log(emailResult[1]);
+                                                    emailCheck = false;
+                                                    $("#emailHead").css("background-color", "red");
+                                                }
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -215,9 +264,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-3">우편번호</span>
+                                        <span class="input-group-text col-3" id="zipcodeHead">우편번호</span>
                                         <input name="zipcode" id="zipcode" type="text" class="form-control"
-                                            aria-label="Amount (to the nearest dollar)" readonly>
+                                            aria-label="Amount (to the nearest dollar)" placeholder="(선택)" readonly>
                                         <button class="btn btn-outline-secondary" type="button" id="addressBtn"
                                             onclick="postcode()">찾기</button>
                                     </div>
@@ -227,9 +276,10 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-3">주소</span>
+                                        <span class="input-group-text col-3" id="address1Head">주소</span>
                                         <input name="address1" id="address1" type="text" class="form-control"
-                                            aria-label="Username" aria-describedby="basic-addon1" readonly>
+                                            aria-label="Username" aria-describedby="basic-addon1" placeholder="(선택)"
+                                            readonly>
                                     </div>
                                 </div>
                             </div>
@@ -237,9 +287,9 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text col-3">상세주소</span>
+                                        <span class="input-group-text col-3" id="address2Head">상세주소</span>
                                         <input name="address2" id="address2" type="text" class="form-control"
-                                            aria-label="Username" aria-describedby="basic-addon1">
+                                            placeholder="(선택)" aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
                                 </div>
                             </div>
@@ -250,6 +300,8 @@
                                         oncomplete: function (data) {
                                             document.getElementById('zipcode').value = data.zonecode;
                                             document.getElementById("address1").value = data.roadAddress;
+                                            document.getElementById("zipcodeHead").sftyle = "backgound-color:aqua;"
+                                            document.getElementById("address1Head").style = "backgound-color:aqua;"
                                         },
                                         theme: {
                                             bgColor: "rgb(252, 252, 252)", //바탕 배경색
@@ -264,6 +316,15 @@
                                         }
                                     }).open();
                                 }
+
+                                $("#address2").on("keyup", function () {
+                                    if ($("#address2").val() != "" && $("#zipcode").val() != "") {
+                                        $("#address2Head").css("backgound-color", "aqua");
+                                    }
+                                    else {
+                                        $("#address2Head").css("backgound-color", "azure");
+                                    }
+                                });
                             </script>
 
                             <div class="row">
@@ -277,12 +338,12 @@
                             let singupForm = document.getElementById("singupForm");
 
                             singupForm.onsubmit = function () {
-                                if (!(idCheck && pwCheck && nameCheck)) {
+                                if (!(idCheck && pwCheck && nameCheck && phoneCheck && emailCheck && addressCheck)) {
                                     Swal.fire({
                                         icon: 'error',
                                         title: '!!!!!!!!!!!!!실패!!!!!!!!!!!!!',
-                                        text: '다시 입력하세요!',
-                                        footer: '<a href="">Why do I have this issue?</a>'
+                                        text: '입력정보를 확인하세요.',
+                                        footer: '<a href="/index.jsp">회원가입 취소하기</a>'
                                     })
                                     return false;
                                 }

@@ -16,7 +16,9 @@ public class MembersControllers extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uri = request.getRequestURI();
-
+        /*
+         /member/dupleCheck.member
+         */
         if (uri.startsWith("/member/dupleCheck.member")) {
             try {
                 MembersDAO dao = MembersDAO.getInstance();
@@ -30,7 +32,11 @@ public class MembersControllers extends HttpServlet {
                 e.printStackTrace();
             }
         }
-
+        /*
+        /member/signup.member
+        {id,pw1(pw),name,phone,email,zipcode,address1,address2}
+        MemberDAO.signup(MemberDTO)의 결과값이 0보다 크면(insert를 성공하면) index.jsp열기
+        */
         if (uri.startsWith("/member/signup.member")) {
             try {
                 MembersDAO dao = MembersDAO.getInstance();
@@ -42,7 +48,6 @@ public class MembersControllers extends HttpServlet {
                 String zipcode = request.getParameter("zipcode");
                 String address1 = request.getParameter("address1");
                 String address2 = request.getParameter("address2");
-                System.out.println(id + pw + name);
 
                 if(dao.signup(new MembersDTO(id, pw, name, phone, email, zipcode, address1, address2, "")) > 0) {
                     response.sendRedirect("/index.jsp");

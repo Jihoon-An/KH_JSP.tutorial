@@ -43,6 +43,8 @@
                             <script>
                                 document.getElementById("close").onclick = function () {
                                     opener.document.getElementById("id").value = "";
+                                    opener.document.getElementById("idHead").style = "background-color:red;";
+                                    opener.idCheck = false;
                                     window.close();
                                 }
                             </script>

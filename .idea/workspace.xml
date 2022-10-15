@@ -2,47 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/WEB-INF/lib/ojdbc6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/ae/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/ae/history.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3644557524.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3644557524.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/participantsIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/participantsIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jst.j2ee.web/webLibrariesCache.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jst.j2ee.web/webLibrariesCache.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/publish/publish1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/publish/publish1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/servers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/servers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/conf/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/DeleteServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/Exam01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/MessagesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/MessagesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/OutputServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/controllers/UpdateServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/dao/MessagesDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/dao/MessagesDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/build/classes/dto/MessagesDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/build/classes/dto/MessagesDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Servers/Tomcat v8.5 Server at jsp_tutorial-config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/BoardProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/BoardProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/controllers/MembersControllers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/main/java/controllers/MembersControllers.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -88,10 +65,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/BoardProject/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BoardProject/src/main/webapp/WEB-INF/lib" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -106,6 +83,7 @@
       <recent name="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.java.commons" />
       <recent name="controllers" />
       <recent name="servlets" />
     </key>
@@ -119,6 +97,9 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="" />
       <option name="docBase" value="C:\study\KH\Back\Java\servlet-jsp\BoardProject\src\main\webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="port" value="80" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -140,6 +121,9 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="" />
       <option name="docBase" value="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="port" value="80" />
       <option name="tomcatInfo">
         <TomcatInfo>
