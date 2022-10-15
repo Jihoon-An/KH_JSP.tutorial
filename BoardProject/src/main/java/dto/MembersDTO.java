@@ -1,4 +1,4 @@
-package main.java.dto;
+package dto;
 
 public class MembersDTO {
     private String id;

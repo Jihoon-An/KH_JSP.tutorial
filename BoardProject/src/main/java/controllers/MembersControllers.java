@@ -1,7 +1,7 @@
-package main.java.controllers;
+package controllers;
 
-import main.java.dao.MembersDAO;
-import main.java.dto.MembersDTO;
+import dao.MembersDAO;
+import dto.MembersDTO;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

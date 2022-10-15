@@ -1,7 +1,7 @@
-package main.java.dao;
+package dao;
 
-import main.java.commons.Password;
-import main.java.dto.MembersDTO;
+import commons.Password;
+import dto.MembersDTO;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

@@ -5,7 +5,7 @@
     <output-test url="file://$MODULE_DIR$/../out/test/BoardProject" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
     </content>
     <content url="jspclass://servlet-jsp/BoardProject">
       <sourceFolder url="jspclass://servlet-jsp/BoardProject" isTestSource="false" />

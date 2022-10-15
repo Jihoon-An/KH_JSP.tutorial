@@ -1,4 +1,4 @@
-package main.java.commons;
+package commons;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
