@@ -18,4 +18,9 @@ public class TimeUtils {
             return null;
         }
     }
+
+    public static String timestampToString(Date time){
+        String date = new SimpleDateFormat("yyyy년 MM월dd일").format(time);
+        return date;
+    }
 }

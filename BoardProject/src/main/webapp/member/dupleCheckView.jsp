@@ -32,7 +32,7 @@
         </head>
 
         <body>
-            <table border=1>
+            <table>
                 <c:choose>
                     <c:when test="${result}">
                         <tr>

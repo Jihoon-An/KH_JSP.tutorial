@@ -4,17 +4,34 @@
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/commons/Password.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/commons/TimeUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/controllers/MembersControllers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/dao/MembersDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/dto/MembersDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/WEB-INF/lib/ojdbc6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/member/dupleCheckView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/member/signup.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/resource/duck.ico" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +57,14 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -60,7 +85,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/BoardProject/src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/BoardProject/src/main/webapp/WEB-INF/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../inflearn/spring/01. spring core basic/project/core" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -93,9 +118,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="" />
       <option name="docBase" value="C:\study\KH\Back\Java\servlet-jsp\BoardProject\src\main\webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="port" value="80" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -117,9 +139,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="" />
       <option name="docBase" value="C:\study\KH\Back\Java\servlet-jsp\NetflixManager\src\main\webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="port" value="80" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -181,5 +200,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

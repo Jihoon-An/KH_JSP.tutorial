@@ -1,5 +1,7 @@
 package dto;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class MembersDTO {
     private String id;
     private String pw;
@@ -17,6 +19,18 @@ public class MembersDTO {
 
     public void setSignupDate(String signupDate) {
         this.signupDate = signupDate;
+    }
+
+    public MembersDTO(HttpServletRequest request){
+        this.id = request.getParameter("id");
+        this.pw = request.getParameter("pw1");
+        this.name = request.getParameter("name");
+        this.phone = request.getParameter("phone");
+        this.email = request.getParameter("email");
+        this.zipcode = request.getParameter("zipcode");
+        this.address1 = request.getParameter("address1");
+        this.address2 = request.getParameter("address2");
+        this.signupDate = "";
     }
 
     public MembersDTO(String id, String pw, String name, String phone, String email, String zipcode, String address1, String address2, String signupDate) {

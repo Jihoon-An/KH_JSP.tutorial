@@ -85,10 +85,10 @@
                                         $("#idHead").css("background-color", "rgb(60, 250, 89)");
                                     }
                                 });
-
+                                
                                 function idConfirm() {
                                     if ($("#id").val() != "") {
-                                        if (/^\w{6,20}$/.exec($("#id").val())) {
+                                        if (/^\w{6,20}$/.test($("#id").val())) {
                                             console.log(idCheck);
                                             window.open("dupleCheck.member?id=" + $("#id").val(), "", "width=400, height=300")
                                             //idCheck = true;
@@ -193,7 +193,7 @@
                                 let name = document.getElementById("name");
 
                                 name.onkeyup = function () {
-                                    if ($("#name").val() != null) {
+                                    if ($("#name").val() != "") {
                                         nameCheck = true;
                                         $("#nameHead").css("background-color", "aqua");
                                     } else {
@@ -217,7 +217,7 @@
                                                     phoneCheck = true;
                                                     $("#phoneHead").css("background-color", "azure");
                                                 }
-                                                else if (/^010\d{8}$/.exec($("#phone").val()) != null) {
+                                                else if (/^010\d{8}$/.test($("#phone").val())) {
                                                     phoneCheck = true;
                                                     $("#phoneHead").css("background-color", "aqua");
                                                 }
@@ -240,18 +240,16 @@
                                         <script>
                                             $("#email").on("keyup", function () {
                                                 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                                                let emailResult = emailRegex.exec($("#email").val());
+                                                let emailResult = emailRegex.test($("#email").val());
                                                 if ($("#email").val() == "") {
                                                     emailCheck = true;
                                                     $("#emailHead").css("background-color", "azure");
                                                 }
-                                                else if (emailResult != undefined) {
-                                                    console.log(emailResult[1]);
+                                                else if (emailResult) {
                                                     emailCheck = true;
                                                     $("#emailHead").css("background-color", "aqua");
                                                 }
                                                 else {
-                                                    console.log(emailResult[1]);
                                                     emailCheck = false;
                                                     $("#emailHead").css("background-color", "red");
                                                 }
@@ -300,8 +298,8 @@
                                         oncomplete: function (data) {
                                             document.getElementById('zipcode').value = data.zonecode;
                                             document.getElementById("address1").value = data.roadAddress;
-                                            document.getElementById("zipcodeHead").sftyle = "backgound-color:aqua;"
-                                            document.getElementById("address1Head").style = "backgound-color:aqua;"
+                                            document.getElementById("zipcodeHead").style = "background-color:aqua;"
+                                            document.getElementById("address1Head").style = "background-color:aqua;"
                                         },
                                         theme: {
                                             bgColor: "rgb(252, 252, 252)", //바탕 배경색
@@ -319,10 +317,10 @@
 
                                 $("#address2").on("keyup", function () {
                                     if ($("#address2").val() != "" && $("#zipcode").val() != "") {
-                                        $("#address2Head").css("backgound-color", "aqua");
+                                        $("#address2Head").css("background-color", "aqua");
                                     }
                                     else {
-                                        $("#address2Head").css("backgound-color", "azure");
+                                        $("#address2Head").css("background-color", "azure");
                                     }
                                 });
                             </script>
