@@ -6,7 +6,7 @@
         <head>
             <meta charset="UTF-8">
             <title>Sign up</title>
-            <link rel="shortcut icon" type="image/x-icon" href="resource/duck.ico">
+            <link rel="shortcut icon" type="image/x-icon" href="/resource/duck.ico">
             <script src="https://code.jquery.com/jquery-3.6.1.min.js"
                 integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
                 </script>

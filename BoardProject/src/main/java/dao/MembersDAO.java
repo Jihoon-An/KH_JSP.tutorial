@@ -6,14 +6,17 @@ import dto.MembersDTO;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MembersDAO {
+//    private static Logger logger = Logger.getGlobal();
+
     private static MembersDAO instance = null;
 
     synchronized public static MembersDAO getInstance() throws Exception {
@@ -85,6 +88,8 @@ public class MembersDAO {
             ResultSet resultSet = pstat.executeQuery();
             if (resultSet.next()) {
                 if (resultSet.getString("pw").equals(Password.getSHA512(pw))) {
+//                    logger.info("Login Success");
+                    System.out.println("Login Success");
                     return true;
                 }
             }
@@ -108,7 +113,7 @@ public class MembersDAO {
         }
     }
 
-    public MembersDTO selectMember(String searchId){
+    public MembersDTO selectMember(String searchId) throws Exception{
         String sql = "select * from members where id = ?";
         try (
                 Connection con = this.getConnection();
@@ -128,9 +133,28 @@ public class MembersDAO {
                 return new MembersDTO(id, "", name, phone, email, zipcode, address1, address2, signupDate);
             }
             return null;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+        }
+    }
+
+    public int modify(MembersDTO dto) throws Exception{
+        String sql = "UPDATE members SET name=?, phone=?, email=?, zipcode=?, address1=?, address2=? WHERE id = ?";
+
+        try (Connection con = this.getConnection();
+             PreparedStatement pstat = con.prepareStatement(sql);) {
+            pstat.setString(1, dto.getName());
+            pstat.setString(2, dto.getPhone());
+            pstat.setString(3, dto.getEmail());
+            pstat.setString(4, dto.getZipcode());
+            pstat.setString(5, dto.getAddress1());
+            pstat.setString(6, dto.getAddress2());
+            pstat.setString(7, dto.getId());
+
+            int result = pstat.executeUpdate();
+            con.commit();
+            con.close();
+            pstat.close();
+
+            return result;
         }
     }
 }

@@ -6,7 +6,7 @@
         <head>
             <meta charset="UTF-8">
             <title>Main</title>
-            <link rel="shortcut icon" type="image/x-icon" href="resource/duck.ico">
+            <link rel="shortcut icon" type="image/x-icon" href="/resource/duck.ico">
             <script src="https://code.jquery.com/jquery-3.6.1.min.js"
                 integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
                 </script>
@@ -50,32 +50,47 @@
             </script>
             <c:choose>
                 <c:when test="${loginId != null}">
-                    <table>
-                        <tr>
-                            <th colspan=3>
-                                <span>${loginId}님 안녕하세요.</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                            <td><form method="post" action="/mypage.member"><button id="mypage">마이페이지</button></form>
-                            <td><form method="post" action="/logout.member"><button id="logout">로그아웃</button></form>
-                            <td><form id="memberoutFrm" method="post" action="/memberout.member"><button id="memberout">회원탈퇴</button></form>
-                        </tr>
-                    </table>
-
+                    <div class="container">
+                        <div class="row">
+                            <table class="col-4 text-center">
+                                <tr>
+                                    <th colspan=4 style="text-align: center;">
+                                        <span>${loginId}님 안녕하세요.</span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/freeBoard.board">
+                                            <button id="mypage" class="btn btn-outline-primary">자유게시판</button>
+                                        </a>
+                                    <td>
+                                        <form method="post" action="/mypage.member">
+                                            <button id="mypage" class="btn btn-outline-primary">마이페이지</button>
+                                        </form>
+                                    <td>
+                                        <form method="post" action="/logout.member">
+                                            <button id="logout" class="btn btn-outline-primary">로그아웃</button>
+                                        </form>
+                                    <td>
+                                        <form id="memberoutFrm" method="post" action="/memberout.member">
+                                            <button id="memberout" class="btn btn-outline-primary">계정 삭제</button>
+                                        </form>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                     <script>
-                        $("#memberoutFrm").on("submit",function(){
+                        $("#memberoutFrm").on("submit", function () {
                             let returnSubmit = false;
                             const swalWithBootstrapButtons = Swal.mixin({
                                 customClass: {
-                                  confirmButton: 'btn btn-success',
-                                  cancelButton: 'btn btn-danger'
+                                    confirmButton: 'btn btn-success',
+                                    cancelButton: 'btn btn-danger'
                                 },
                                 buttonsStyling: false
-                              })
-                              
-                              swalWithBootstrapButtons.fire({
+                            })
+
+                            swalWithBootstrapButtons.fire({
                                 title: 'Are you sure?',
                                 text: "돌이킬 수 없습니다!",
                                 icon: 'warning',
@@ -83,30 +98,30 @@
                                 confirmButtonText: '지우기',
                                 cancelButtonText: '취소',
                                 reverseButtons: true
-                              }).then((result) => {
+                            }).then((result) => {
                                 if (result.isConfirmed) {
-                                  swalWithBootstrapButtons.fire(
-                                    'Deleted!',
-                                    'Your account has been deleted.',
-                                    'success'
-                                  );
-                                  returnSubmit = true;
+                                    swalWithBootstrapButtons.fire(
+                                        'Deleted!',
+                                        'Your account has been deleted.',
+                                        'success'
+                                    );
+                                    returnSubmit = true;
                                 } else if (
-                                  /* Read more about handling dismissals below */
-                                  result.dismiss === Swal.DismissReason.cancel
+                                    /* Read more about handling dismissals below */
+                                    result.dismiss === Swal.DismissReason.cancel
                                 ) {
-                                  swalWithBootstrapButtons.fire(
-                                    'Cancelled',
-                                    'Your imaginary account is safe :)',
-                                    'error'
-                                  )
+                                    swalWithBootstrapButtons.fire(
+                                        'Cancelled',
+                                        'Your imaginary account is safe :)',
+                                        'error'
+                                    )
                                 }
-                              })
-                              return returnSubmit;
+                            })
+                            return returnSubmit;
                         });
                     </script>
                 </c:when>
-                
+
                 <c:otherwise>
                     <div class="loginBox">
                         <div class="container">

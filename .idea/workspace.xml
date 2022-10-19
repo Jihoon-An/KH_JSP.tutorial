@@ -2,36 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/participantsIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/participantsIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes/savedIndexNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.validation/dep.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/mypage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/commons/Password.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/commons/TimeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/controllers/MembersControllers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/dao/MembersDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/java/dto/MembersDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/META-INF/context.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/WEB-INF/lib/ojdbc6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/member/dupleCheckView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/member/signup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/main/webapp/resource/duck.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/MembersControllers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/controllers/MembersControllers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dao/MembersDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dao/MembersDAO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -89,7 +81,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
