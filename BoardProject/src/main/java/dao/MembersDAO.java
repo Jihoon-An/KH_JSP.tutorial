@@ -6,13 +6,10 @@ import dto.MembersDTO;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class MembersDAO {
 //    private static Logger logger = Logger.getGlobal();
@@ -129,7 +126,7 @@ public class MembersDAO {
                 String zipcode = resultSet.getString("zipcode");
                 String address1 = resultSet.getString("address1");
                 String address2 = resultSet.getString("address2");
-                String signupDate = TimeUtils.timestampToString(resultSet.getDate("signup_date"));
+                String signupDate = TimeUtils.timestampToString(resultSet.getTimestamp("signup_date"));
                 return new MembersDTO(id, "", name, phone, email, zipcode, address1, address2, signupDate);
             }
             return null;
@@ -157,4 +154,5 @@ public class MembersDAO {
             return result;
         }
     }
+
 }

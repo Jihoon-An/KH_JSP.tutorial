@@ -51,7 +51,7 @@
             <c:choose>
                 <c:when test="${loginId != null}">
                     <div class="container">
-                        <div class="row">
+                        <div class="row justify-content-center">
                             <table class="col-4 text-center">
                                 <tr>
                                     <th colspan=4 style="text-align: center;">
@@ -125,6 +125,9 @@
                 <c:otherwise>
                     <div class="loginBox">
                         <div class="container">
+                            <div class="row"><a href="/freeBoard.board">
+                                <button id="mypage" class="btn btn-outline-primary">자유게시판</button>
+                            </a></div>
                             <div id="loginHeader" class="row text-center">
                                 <span class="h1 fw-bold">Login Box</span>
                             </div>
@@ -139,16 +142,16 @@
                                     <input type="password" class="form-control col-9" id="pw" name="pw"
                                         aria-describedby="basic-addon3">
                                 </div>
+                                <div class="text-center mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" name="checkRemeberId"
+                                        aria-label="Radio button for following text input">
+                                    <span>Remember ID</span>
+                                </div>
                                 <div class="row justify-content-center pt-2">
                                     <button id="loginBtn" class="col-3 btn btn-primary mx-2"
                                         type="submit">Login</button>
                                     <a class="col-3 btn btn-primary mx-2" href="member/signup.jsp" role="button">Sign
                                         Up</a>
-                                </div>
-                                <div class="text-center mt-3">
-                                    <input class="form-check-input" type="radio" value="" name="checkRemeberId"
-                                        aria-label="Radio button for following text input">
-                                    <span>Remember ID</span>
                                 </div>
                             </form>
                             <script>

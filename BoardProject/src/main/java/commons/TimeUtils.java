@@ -19,8 +19,10 @@ public class TimeUtils {
         }
     }
 
-    public static String timestampToString(Date time){
-        String date = new SimpleDateFormat("yyyy년 MM월dd일").format(time);
+    public static String timestampToString(Timestamp time){
+        String date;
+        Timestamp stamp = new Timestamp(System.currentTimeMillis());
+        date = new SimpleDateFormat("yyyy년 MM월dd일").format(time);
         return date;
     }
 }

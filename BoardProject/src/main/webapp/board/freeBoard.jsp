@@ -24,6 +24,7 @@
             <style>
                 .font-dongle {
                     font-family: 'Dongle', sans-serif;
+                    font-size: 130%;
                 }
 
                 .font-yeonsung {
@@ -38,7 +39,7 @@
                 }
 
                 #contentsDiv {
-                    height: 470px;
+                    height: 475px;
                 }
 
                 #mainCont {
@@ -55,8 +56,14 @@
                     cursor: pointer;
                 }
 
+                .contentA{
+                    text-decoration: none;
+                }
                 .content {
                     font-family: 'Dongle', sans-serif;
+                }
+                .content:hover{
+                    background-color: rgb(222, 235, 241);
                 }
             </style>
         </head>
@@ -89,23 +96,25 @@
                 <div class="row bg-light" id="contentsDiv">
                     <div class="pt-2" id="contents">
                         <c:forEach var="posts" items="${posts}">
-                            <div class="row content">
-                                <div class="col-1 text-center content-seq">
-                                    <h2>${posts.postNum}</h2>
+                            <a class="contentA" href="/detail.board?postNum=${posts.postNum}">
+                                <div class="row table table-hover content">
+                                    <div class="col-1 text-center content-seq">
+                                        <h2>${posts.postNum}</h2>
+                                    </div>
+                                    <div class="col-6 text-center content-title">
+                                        <h2>${posts.title}</h2>
+                                    </div>
+                                    <div class="col-2 text-center content-writer">
+                                        <h2>${posts.writer}</h2>
+                                    </div>
+                                    <div class="col-2 text-center content-date">
+                                        <h2>${posts.writeDate}</h2>
+                                    </div>
+                                    <div class="col-1 text-center content-date">
+                                        <h2>${posts.viewCount}</h2>
+                                    </div>
                                 </div>
-                                <div class="col-6 text-center content-title">
-                                    <h2>${posts.title}</h2>
-                                </div>
-                                <div class="col-2 text-center content-writer">
-                                    <h2>${posts.writer}</h2>
-                                </div>
-                                <div class="col-2 text-center content-date">
-                                    <h2>${posts.writeDate}</h2>
-                                </div>
-                                <div class="col-1 text-center content-date">
-                                    <h2>${posts.viewCount}</h2>
-                                </div>
-                            </div>
+                            </a>
                         </c:forEach>
                     </div>
                 </div>
@@ -113,7 +122,8 @@
 
             <div id="footerCont" class="container">
                 <div class="row">
-                    <div class="col-2"><a href="/index.jsp" class="btn btn-light m-2 border border-info">메인</a></div>
+                    <div class="col-2"><a href="/index.jsp"
+                            class="font-dongle btn btn-light m-2 border border-info">메인</a></div>
                     <div class="col-8 text-center">
                         <span class="pageNum">1</span>
                         <span class="pageNum">2</span>
@@ -129,7 +139,7 @@
                     <div class="col-2 text-end">
                         <!-- <form action="/freePost.board"><button type="submit"
                                 class="btn btn-light m-2 border border-info">작성하기</button></form> -->
-                        <a href="/freePost.board" class="btn btn-light m-2 border border-info">작성하기</a>
+                        <a href="/freePost.board" class="font-dongle btn btn-light m-2 border border-info">작성하기</a>
                     </div>
                 </div>
             </div>

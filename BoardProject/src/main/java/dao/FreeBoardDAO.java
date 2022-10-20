@@ -1,6 +1,5 @@
 package dao;
 
-import commons.Password;
 import dto.FreeBoardDTO;
 
 import javax.naming.Context;
@@ -43,25 +42,77 @@ public class FreeBoardDAO {
 
             int result = pstat.executeUpdate();
             con.commit();
-            con.close();
-            pstat.close();
-
             return result;
         }
     }
 
-    public List<FreeBoardDTO> roadPostingList() throws Exception{
-        String sql = "select * from freeBoard order by 1";
+    public List<FreeBoardDTO> loadPostingList() throws Exception {
+        String sql = "select * from freeBoard order by write_date";
         try (
                 Connection con = this.getConnection();
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             List<FreeBoardDTO> result = new ArrayList<>();
             ResultSet resultSet = pstat.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 result.add(0, new FreeBoardDTO(resultSet));
             }
             return result;
+        }
+    }
+
+    public FreeBoardDTO searchLoadPost(int postedNum) throws Exception {
+        String sql = "select * from freeBoard where freeBoard_seq = ?";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
+            pstat.setInt(1, postedNum);
+            ResultSet resultSet = pstat.executeQuery();
+            if (resultSet.next()) {
+                return new FreeBoardDTO(resultSet);
+            } else {
+                return null;
+            }
+        }
+    }
+
+    public void veiwCountUp(int postNum) throws Exception {
+        String sql = "UPDATE freeBoard SET view_count = view_count + 1 WHERE freeBoard_seq=?";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
+            pstat.setInt(1, postNum);
+            pstat.executeUpdate();
+            con.commit();
+        }
+    }
+
+    public void deletePost(int postNum) throws Exception {
+        String sql = "delete from freeBoard where freeBoard_seq=?";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
+            pstat.setInt(1, postNum);
+            pstat.executeUpdate();
+            con.commit();
+        }
+    }
+
+    public void modify(FreeBoardDTO dto) throws Exception {
+        String sql = "UPDATE freeBoard SET title=?,content=?,write_date=sysdate WHERE freeBoard_seq=?";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
+            pstat.setString(1, dto.getTitle());
+            pstat.setString(2, dto.getContent());
+            pstat.setInt(3, dto.getPostNum());
+            pstat.executeUpdate();
+            System.out.println("수정 완료");
+            con.commit();
         }
     }
 }

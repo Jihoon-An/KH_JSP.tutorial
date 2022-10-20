@@ -24,47 +24,103 @@ public class FreeBoardControllers extends HttpServlet {
 
         String uri = request.getRequestURI();
 
-        switch (uri){
-            case("/freeBoard.board"):
+        switch (uri) {
+            case ("/freeBoard.board"):
                 System.out.println("page freeBoard");
                 try {
-                    List<FreeBoardDTO> posts = FreeBoardDAO.getInstance().roadPostingList();
+                    List<FreeBoardDTO> posts = FreeBoardDAO.getInstance().loadPostingList();
                     request.setAttribute("posts", posts);
 
-                    request.getRequestDispatcher("/board/freeBoard.jsp").forward(request,response);
+                    request.getRequestDispatcher("/board/freeBoard.jsp").forward(request, response);
                 } catch (Exception e) {
                     e.printStackTrace();
                     response.sendRedirect("/");
                 }
                 break;
 
-            case("/freePost.board"):
+            case ("/freePost.board"):
                 System.out.println("page freePost");
                 try {
                     response.sendRedirect("/board/freePost.jsp");
                 } catch (Exception e) {
+                    System.out.println("1");
                     e.printStackTrace();
                     response.sendRedirect("/");
                 }
                 break;
-            case("/postInFreeBoard.board"):
+            case ("/postInFreeBoard.board"):
                 System.out.println("post In FreeBoard");
                 try {
                     FreeBoardDAO freeBoardDao = FreeBoardDAO.getInstance();
-                    MembersDAO membersDao = MembersDAO.getInstance();
-
                     String id = (String) request.getSession().getAttribute("loginId");
-                    String writer = membersDao.selectMember(id).getName();
+                    String writer = id;
                     String title = request.getParameter("title");
                     String content = request.getParameter("content");
                     freeBoardDao.posting(new FreeBoardDTO(writer, title, content));
                     response.sendRedirect("/freeBoard.board");
-                }catch (Exception e){
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    response.sendRedirect("/");
+                }
+                break;
+            case ("/detail.board"):
+                System.out.println("detail Board");
+                try {
+                    FreeBoardDAO freeBoardDao = FreeBoardDAO.getInstance();
+                    int postNum = Integer.parseInt(request.getParameter("postNum"));
+                    freeBoardDao.veiwCountUp(postNum);
+                    FreeBoardDTO post = freeBoardDao.searchLoadPost(postNum);
+                    request.setAttribute("post", post);
+                    request.setAttribute("category", "자유게시판");
+                    request.getRequestDispatcher("/board/post.jsp").forward(request, response);
+                } catch (Exception e) {
+                    System.out.println("2");
+                    e.printStackTrace();
+                    response.sendRedirect("/");
+                }
+                break;
+            case ("/delete.board"):
+                System.out.println("detail Board");
+                try {
+                    FreeBoardDAO.getInstance().deletePost(Integer.parseInt(request.getParameter("postNum")));
+                    response.sendRedirect("/freeBoard.board");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    response.sendRedirect("/");
+                }
+                break;
+            case ("/toModify.board"):
+                System.out.println("to modify Board");
+                try {
+                    FreeBoardDTO post = FreeBoardDAO.getInstance().searchLoadPost(Integer.parseInt(request.getParameter("postNum")));
+                    request.setAttribute("post", post);
+                    request.getRequestDispatcher("/board/freePostModify.jsp").forward(request, response);
+                } catch (Exception e) {
+                    System.out.println("3");
+                    e.printStackTrace();
+                    response.sendRedirect("/");
+                }
+                break;
+            case ("/modify.board"):
+                System.out.println("modify Board");
+                try {
+                    String id = (String)request.getSession().getAttribute("loginId");
+                    String title = request.getParameter("title");
+                    String content = request.getParameter("content");
+                    FreeBoardDTO freeBoardDTO = new FreeBoardDTO(id, title, content);
+                    int postNum = Integer.parseInt(request.getParameter("postNum"));
+                    freeBoardDTO.setPostNum(postNum);
+                    FreeBoardDAO.getInstance().modify(freeBoardDTO);
+                    response.sendRedirect("/detail.board?postNum="+postNum);
+                } catch (Exception e) {
+                    System.out.println("4");
                     e.printStackTrace();
                     response.sendRedirect("/");
                 }
                 break;
             default:
+                System.out.println("error");
+                response.sendRedirect("/");
         }
     }
 

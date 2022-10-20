@@ -1,6 +1,7 @@
 package dto;
 
 import commons.TimeUtils;
+import dao.MembersDAO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,6 +9,7 @@ import java.sql.SQLException;
 public class FreeBoardDTO {
     private int postNum;
     private String title;
+    private String id;
     private String content;
     private String writer;
     private String writeDate;
@@ -17,16 +19,25 @@ public class FreeBoardDTO {
     public FreeBoardDTO(ResultSet resultSet) throws Exception {
         this.title = resultSet.getString("title");
         this.content = resultSet.getString("content");
-        this.writer = resultSet.getString("writer");
-        this.writeDate = TimeUtils.timestampToString(resultSet.getDate("write_date"));
+        this.id = resultSet.getString("writer");
+        this.writer = MembersDAO.getInstance().selectMember(resultSet.getString("writer")).getName();
+        this.writeDate = TimeUtils.timestampToString(resultSet.getTimestamp("write_date"));
         this.postNum = resultSet.getInt("freeBoard_seq");
         this.viewCount = resultSet.getInt("view_count");
     }
 
     public FreeBoardDTO(String writer, String title, String content) {
+        this.writer = writer;
         this.title = title;
         this.content = content;
-        this.writer = writer;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getPostNum() {

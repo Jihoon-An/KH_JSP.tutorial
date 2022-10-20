@@ -5,7 +5,7 @@
 
         <head>
             <meta charset="UTF-8">
-            <title>자유글 작성하기</title>
+            <title>게시글 수정하기</title>
             <link rel="shortcut icon" type="image/x-icon" href="/resource/duck.ico">
             <script src="https://code.jquery.com/jquery-3.6.1.min.js"
                 integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
@@ -54,31 +54,33 @@
                 <c:otherwise>
                     <div id="headCont" class="container p-5">
                         <div class="row text-center">
-                            <h1 class="font-yeonsung">글 작성</h1>
+                            <h1 class="font-yeonsung">글 수정</h1>
                         </div>
                     </div>
-                    <form method="post" action="/postInFreeBoard.board">
+                    <form method="post" action="/modify.board" >
                         <div id="postCont" class="container">
                             <div class="row justify-content-center">
                                 <div class="col-6">
                                     <div class="row">
                                         <span class="col-2 border border-info bg-light text-center">제목</span>
-                                        <input type="text" class="input" id="title" name="title"
+                                        <input type="text" class="input" id="title" name="title" value="${post.title}"
                                             aria-describedby="basic-addon3">
                                     </div>
                                     <div class="row">
                                         <span class="col-2 border border-info bg-light text-center">내용</span>
                                         <textarea type="text" class="input" id="content" name="content"
-                                            aria-describedby="basic-addon3"></textarea>
+                                        aria-describedby="basic-addon3">${post.content}</textarea>
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <div class="row justify-content-center">
                                 <div class="col-3 text-start"><a href="/freeBoard.board" type="button"
-                                        class="btn btn-primary font-dongle">게시판 목록</a></div>
-                                <div class="col-3 text-end"><button type="submit" class="font-dongle btn btn-primary">작성하기</button>
-                                </div>
+                                    class="btn btn-primary font-dongle">취소하기</a></div>
+                                    <div class="col-3 text-end">
+                                        <input type="text" style="display: none;" name="postNum" value="${post.postNum}" readonly>
+                                        <button type="submit" class="font-dongle btn btn-primary">수정하기</button>
+                                    </div>
                             </div>
                         </div>
                     </form>
