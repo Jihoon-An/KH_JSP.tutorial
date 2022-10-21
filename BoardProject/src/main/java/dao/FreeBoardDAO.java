@@ -34,14 +34,16 @@ public class FreeBoardDAO {
         String sql = "insert into freeBoard values(freeBoard_seq.nextval,?,?,?,sysdate,0)";
 
         try (Connection con = this.getConnection();
-             PreparedStatement pstat = con.prepareStatement(sql);) {
+             PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
             pstat.setString(1, dto.getWriter());
             pstat.setString(2, dto.getTitle());
             pstat.setString(3, dto.getContent());
 
-
             int result = pstat.executeUpdate();
+
             con.commit();
+
             return result;
         }
     }
@@ -53,6 +55,7 @@ public class FreeBoardDAO {
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             List<FreeBoardDTO> result = new ArrayList<>();
+
             try (ResultSet resultSet = pstat.executeQuery();) {
                 while (resultSet.next()) {
                     result.add(0, new FreeBoardDTO(resultSet));
@@ -69,6 +72,7 @@ public class FreeBoardDAO {
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             pstat.setInt(1, postedNum);
+
             try (ResultSet resultSet = pstat.executeQuery();) {
                 if (resultSet.next()) {
                     return new FreeBoardDTO(resultSet);
@@ -86,7 +90,9 @@ public class FreeBoardDAO {
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             pstat.setInt(1, postNum);
+
             pstat.executeUpdate();
+
             con.commit();
         }
     }
@@ -98,7 +104,9 @@ public class FreeBoardDAO {
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             pstat.setInt(1, postNum);
+
             pstat.executeUpdate();
+
             con.commit();
         }
     }
@@ -112,8 +120,11 @@ public class FreeBoardDAO {
             pstat.setString(1, dto.getTitle());
             pstat.setString(2, dto.getContent());
             pstat.setInt(3, dto.getPostNum());
+
             pstat.executeUpdate();
+
             System.out.println("수정 완료");
+
             con.commit();
         }
     }
@@ -129,10 +140,10 @@ public class FreeBoardDAO {
             rs.next();
             int recordTotalCount = rs.getInt("count(*)");
             dto.setRecordTotalCount(recordTotalCount);
-            ; //테이블에 144개의 글이 있다고 가정.
-            int recordCountPerPage = dto.getRecordCountPerPage(); //게시판 한 페이지당 10개의 글씩 보여주기로 설정.
-            int naviCountPerPage = dto.getNaviCountPerPage(); //게시판 하단의 Page Navigator 가 한번에 몇 개씩 보여질지 설정.
-            int pageTotalCount = (recordTotalCount + recordCountPerPage - 1) / recordCountPerPage; //전체 필요한 페이지 수
+
+            int recordCountPerPage = dto.getRecordCountPerPage();
+            int naviCountPerPage = dto.getNaviCountPerPage();
+            int pageTotalCount = (recordTotalCount + recordCountPerPage - 1) / recordCountPerPage;
 
             if (currentPage < 1) {
                 currentPage = 1;
@@ -142,19 +153,22 @@ public class FreeBoardDAO {
 
             int startNavi = ((currentPage - 1) / naviCountPerPage * naviCountPerPage) + 1;
             int endNavi = startNavi + naviCountPerPage - 1;
-            if (endNavi > pageTotalCount){
+            if (endNavi > pageTotalCount) {
                 endNavi = pageTotalCount;
             }
+
             StringBuilder sb = new StringBuilder();
+
             if (startNavi != 1) {
-                sb.append("<a href='/freeBoard.board?cpage="+(startNavi-1)+"'>< </a>");
+                sb.append("<a href='/freeBoard.board?cpage=" + (startNavi - 1) + "'>< </a>");
             }
             for (int i = startNavi; i <= endNavi; i++) {
                 sb.append("<a href='/freeBoard.board?cpage=" + i + "'>" + i + " </a>");
             }
             if (endNavi != pageTotalCount) {
-                sb.append("<a href='/freeBoard.board?cpage="+(endNavi+1)+"'>> </a>");
+                sb.append("<a href='/freeBoard.board?cpage=" + (endNavi + 1) + "'>> </a>");
             }
+
             return sb.toString();
         }
     }
@@ -166,8 +180,10 @@ public class FreeBoardDAO {
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             List<FreeBoardDTO> list = new ArrayList<>();
+
             pstat.setInt(1, start);
             pstat.setInt(2, end);
+
             try (ResultSet resultSet = pstat.executeQuery();) {
                 while (resultSet.next()) {
                     list.add(new FreeBoardDTO(resultSet));

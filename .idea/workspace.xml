@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/test/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/BoardProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/BoardProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freeBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freeBoard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePost.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePostModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePostModify.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/FreeBoardControllers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/controllers/FreeBoardControllers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +62,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -184,11 +173,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.getPageNaviTest" />
       <item itemvalue="Smart Tomcat.BoardProject" />
       <item itemvalue="Smart Tomcat.jsp_tutorial" />
       <item itemvalue="Smart Tomcat.NetflixManager" />
       <item itemvalue="Smart Tomcat.Tomcat: BoardProject" />
-      <item itemvalue="Application.getPageNaviTest" />
     </list>
     <recent_temporary>
       <list>
