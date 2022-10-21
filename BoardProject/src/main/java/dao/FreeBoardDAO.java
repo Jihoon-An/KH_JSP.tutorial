@@ -115,4 +115,16 @@ public class FreeBoardDAO {
             con.commit();
         }
     }
+
+    public static String getPageNavi() {
+        int recordTotalCount = 144; //테이블에 144개의 글이 있다고 가정.
+        int recordCountPerPage = 10; //게시판 한 페이지당 10개의 글씩 보여주기로 설정.
+        int naviCountPerPage = 10; //게시판 하단의 Pae Navigator 가 한번에 몇 개씩 보여질지 설정.
+        int pageTotalCount = (recordTotalCount + recordCountPerPage - 1) / recordCountPerPage; //전체 필요한 페이지 수
+        int currentPage = 7; // 현재 페이지 가정.
+        int startNavi = ((currentPage - 1) / naviCountPerPage * naviCountPerPage) + 1;
+        int endNavi = startNavi + naviCountPerPage - 1;
+
+        return "";
+    }
 }

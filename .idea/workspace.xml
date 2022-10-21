@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freeBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freeBoard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePostModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePostModify.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +84,7 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.BoardProject">
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: BoardProject">
     <configuration name="BoardProject" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -123,6 +127,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat: BoardProject" type="com.poratu.idea.plugins.tomcat" temporary="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="contextPath" value="/BoardProject" />
+      <option name="docBase" value="$PROJECT_DIR$/BoardProject/src/main/webapp" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/8.5.83" />
+          <option name="path" value="$PROJECT_DIR$/../../../../../Program Files/Apache Software Foundation/Tomcat 8.5" />
+          <option name="version" value="8.5.83.0" />
+        </TomcatInfo>
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="jsp_tutorial" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -148,7 +171,13 @@
       <item itemvalue="Smart Tomcat.BoardProject" />
       <item itemvalue="Smart Tomcat.jsp_tutorial" />
       <item itemvalue="Smart Tomcat.NetflixManager" />
+      <item itemvalue="Smart Tomcat.Tomcat: BoardProject" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Smart Tomcat.Tomcat: BoardProject" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,6 +200,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

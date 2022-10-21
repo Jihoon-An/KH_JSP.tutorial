@@ -68,8 +68,10 @@ public class FreeBoardControllers extends HttpServlet {
                 try {
                     FreeBoardDAO freeBoardDao = FreeBoardDAO.getInstance();
                     int postNum = Integer.parseInt(request.getParameter("postNum"));
-                    freeBoardDao.veiwCountUp(postNum);
                     FreeBoardDTO post = freeBoardDao.searchLoadPost(postNum);
+                    if (request.getSession().getAttribute("loginId").equals(post.getId())) {
+                        freeBoardDao.veiwCountUp(postNum);
+                    }
                     request.setAttribute("post", post);
                     request.setAttribute("category", "자유게시판");
                     request.getRequestDispatcher("/board/post.jsp").forward(request, response);
@@ -104,14 +106,14 @@ public class FreeBoardControllers extends HttpServlet {
             case ("/modify.board"):
                 System.out.println("modify Board");
                 try {
-                    String id = (String)request.getSession().getAttribute("loginId");
+                    String id = (String) request.getSession().getAttribute("loginId");
                     String title = request.getParameter("title");
                     String content = request.getParameter("content");
                     FreeBoardDTO freeBoardDTO = new FreeBoardDTO(id, title, content);
                     int postNum = Integer.parseInt(request.getParameter("postNum"));
                     freeBoardDTO.setPostNum(postNum);
                     FreeBoardDAO.getInstance().modify(freeBoardDTO);
-                    response.sendRedirect("/detail.board?postNum="+postNum);
+                    response.sendRedirect("/detail.board?postNum=" + postNum);
                 } catch (Exception e) {
                     System.out.println("4");
                     e.printStackTrace();

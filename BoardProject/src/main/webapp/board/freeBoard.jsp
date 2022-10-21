@@ -23,6 +23,7 @@
                 rel="stylesheet">
             <style>
                 .font-dongle {
+                    line-height: 80%;
                     font-family: 'Dongle', sans-serif;
                     font-size: 130%;
                 }
@@ -39,7 +40,7 @@
                 }
 
                 #contentsDiv {
-                    height: 475px;
+                    height: max-content;
                 }
 
                 #mainCont {
@@ -59,6 +60,7 @@
                 .contentA{
                     text-decoration: none;
                 }
+         
                 .content {
                     font-family: 'Dongle', sans-serif;
                 }
@@ -78,39 +80,39 @@
             <div id="mainCont" class="container">
 
                 <div id="colName" class="row bg-info">
-                    <div class="col-1"></div>
-                    <div class="col-6 text-center font-yeonsung">
+                    <div class="col-xl-1 d-none d-xl-block"></div>
+                    <div class="col-xl-6 col-lg-6 col-8 text-center font-yeonsung">
                         <h2>제목</h2>
                     </div>
-                    <div class="col-2 text-center font-yeonsung">
+                    <div class="col-xl-2 col-lg-3 col-2 text-center font-yeonsung">
                         <h2>작성자</h2>
                     </div>
-                    <div class="col-2 text-center font-yeonsung">
+                    <div class="col-xl-2 col-lg-3 d-none d-lg-block text-center font-yeonsung">
                         <h2>날짜</h2>
                     </div>
-                    <div class="col-1 text-center font-yeonsung">
+                    <div class="col-2 col-lg-1 text-center font-yeonsung">
                         <h2>조회</h2>
                     </div>
                 </div>
 
                 <div class="row bg-light" id="contentsDiv">
-                    <div class="pt-2" id="contents">
+                    <div class="col" id="contents">
                         <c:forEach var="posts" items="${posts}">
                             <a class="contentA" href="/detail.board?postNum=${posts.postNum}">
                                 <div class="row table table-hover content">
-                                    <div class="col-1 text-center content-seq">
+                                    <div class="col-xl-1 col-lg-1 d-none d-xl-block text-center content-seq">
                                         <h2>${posts.postNum}</h2>
                                     </div>
-                                    <div class="col-6 text-center content-title">
+                                    <div class="col-xl-6 col-lg-6 col-8 text-center content-title">
                                         <h2>${posts.title}</h2>
                                     </div>
-                                    <div class="col-2 text-center content-writer">
+                                    <div class="col-xl-2 col-lg-3 col-2 text-center content-writer">
                                         <h2>${posts.writer}</h2>
                                     </div>
-                                    <div class="col-2 text-center content-date">
+                                    <div class="col-xl-2 col-lg-3 d-none d-lg-block text-center content-date">
                                         <h2>${posts.writeDate}</h2>
                                     </div>
-                                    <div class="col-1 text-center content-date">
+                                    <div class="col-2 col-lg-1 text-center content-date">
                                         <h2>${posts.viewCount}</h2>
                                     </div>
                                 </div>
@@ -133,8 +135,6 @@
                         <span class="pageNum">6</span>
                         <span class="pageNum">7</span>
                         <span class="pageNum">8</span>
-                        <span class="pageNum">9</span>
-                        <span class="pageNum">10</span>
                     </div>
                     <div class="col-2 text-end">
                         <!-- <form action="/freePost.board"><button type="submit"

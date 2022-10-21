@@ -78,7 +78,7 @@
                                 <div class="col-3 text-start"><a href="/freeBoard.board" type="button"
                                     class="btn btn-primary font-dongle">취소하기</a></div>
                                     <div class="col-3 text-end">
-                                        <input type="text" style="display: none;" name="postNum" value="${post.postNum}" readonly>
+                                        <input type="hidden" name="postNum" value="${post.postNum}">
                                         <button type="submit" class="font-dongle btn btn-primary">수정하기</button>
                                     </div>
                             </div>
