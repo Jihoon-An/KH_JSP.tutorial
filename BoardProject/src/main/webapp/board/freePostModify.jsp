@@ -75,7 +75,7 @@
                             </div>
                             
                             <div class="row justify-content-center">
-                                <div class="col-3 text-start"><a href="/freeBoard.board" type="button"
+                                <div class="col-3 text-start"><a href="/freeBoard.board?cpage=1" type="button"
                                     class="btn btn-primary font-dongle">취소하기</a></div>
                                     <div class="col-3 text-end">
                                         <input type="hidden" name="postNum" value="${post.postNum}">

@@ -46,38 +46,40 @@ public class FreeBoardDAO {
         }
     }
 
-    public List<FreeBoardDTO> loadPostingList() throws Exception {
+    public List<FreeBoardDTO> searchAllPosting() throws Exception {
         String sql = "select * from freeBoard order by write_date";
         try (
                 Connection con = this.getConnection();
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             List<FreeBoardDTO> result = new ArrayList<>();
-            ResultSet resultSet = pstat.executeQuery();
-            while (resultSet.next()) {
-                result.add(0, new FreeBoardDTO(resultSet));
+            try (ResultSet resultSet = pstat.executeQuery();) {
+                while (resultSet.next()) {
+                    result.add(0, new FreeBoardDTO(resultSet));
+                }
+                return result;
             }
-            return result;
         }
     }
 
-    public FreeBoardDTO searchLoadPost(int postedNum) throws Exception {
+    public FreeBoardDTO searchPosting(int postedNum) throws Exception {
         String sql = "select * from freeBoard where freeBoard_seq = ?";
         try (
                 Connection con = this.getConnection();
                 PreparedStatement pstat = con.prepareStatement(sql);
         ) {
             pstat.setInt(1, postedNum);
-            ResultSet resultSet = pstat.executeQuery();
-            if (resultSet.next()) {
-                return new FreeBoardDTO(resultSet);
-            } else {
-                return null;
+            try (ResultSet resultSet = pstat.executeQuery();) {
+                if (resultSet.next()) {
+                    return new FreeBoardDTO(resultSet);
+                } else {
+                    return null;
+                }
             }
         }
     }
 
-    public void veiwCountUp(int postNum) throws Exception {
+    public void viewCountUp(int postNum) throws Exception {
         String sql = "UPDATE freeBoard SET view_count = view_count + 1 WHERE freeBoard_seq=?";
         try (
                 Connection con = this.getConnection();
@@ -89,7 +91,7 @@ public class FreeBoardDAO {
         }
     }
 
-    public void deletePost(int postNum) throws Exception {
+    public void deletePosting(int postNum) throws Exception {
         String sql = "delete from freeBoard where freeBoard_seq=?";
         try (
                 Connection con = this.getConnection();
@@ -101,7 +103,7 @@ public class FreeBoardDAO {
         }
     }
 
-    public void modify(FreeBoardDTO dto) throws Exception {
+    public void modifyPosting(FreeBoardDTO dto) throws Exception {
         String sql = "UPDATE freeBoard SET title=?,content=?,write_date=sysdate WHERE freeBoard_seq=?";
         try (
                 Connection con = this.getConnection();
@@ -116,15 +118,62 @@ public class FreeBoardDAO {
         }
     }
 
-    public static String getPageNavi() {
-        int recordTotalCount = 144; //테이블에 144개의 글이 있다고 가정.
-        int recordCountPerPage = 10; //게시판 한 페이지당 10개의 글씩 보여주기로 설정.
-        int naviCountPerPage = 10; //게시판 하단의 Pae Navigator 가 한번에 몇 개씩 보여질지 설정.
-        int pageTotalCount = (recordTotalCount + recordCountPerPage - 1) / recordCountPerPage; //전체 필요한 페이지 수
-        int currentPage = 7; // 현재 페이지 가정.
-        int startNavi = ((currentPage - 1) / naviCountPerPage * naviCountPerPage) + 1;
-        int endNavi = startNavi + naviCountPerPage - 1;
+    public String getPageNavi(int currentPage, FreeBoardDTO dto) throws Exception {
 
-        return "";
+        String sql = "select count(*) from freeBoard";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+                ResultSet rs = pstat.executeQuery();
+        ) {
+            rs.next();
+            int recordTotalCount = rs.getInt("count(*)");
+            dto.setRecordTotalCount(recordTotalCount);
+            ; //테이블에 144개의 글이 있다고 가정.
+            int recordCountPerPage = dto.getRecordCountPerPage(); //게시판 한 페이지당 10개의 글씩 보여주기로 설정.
+            int naviCountPerPage = dto.getNaviCountPerPage(); //게시판 하단의 Page Navigator 가 한번에 몇 개씩 보여질지 설정.
+            int pageTotalCount = (recordTotalCount + recordCountPerPage - 1) / recordCountPerPage; //전체 필요한 페이지 수
+
+            if (currentPage < 1) {
+                currentPage = 1;
+            } else if (currentPage > pageTotalCount) {
+                currentPage = pageTotalCount;
+            }
+
+            int startNavi = ((currentPage - 1) / naviCountPerPage * naviCountPerPage) + 1;
+            int endNavi = startNavi + naviCountPerPage - 1;
+            if (endNavi > pageTotalCount){
+                endNavi = pageTotalCount;
+            }
+            StringBuilder sb = new StringBuilder();
+            if (startNavi != 1) {
+                sb.append("<a href='/freeBoard.board?cpage="+(startNavi-1)+"'>< </a>");
+            }
+            for (int i = startNavi; i <= endNavi; i++) {
+                sb.append("<a href='/freeBoard.board?cpage=" + i + "'>" + i + " </a>");
+            }
+            if (endNavi != pageTotalCount) {
+                sb.append("<a href='/freeBoard.board?cpage="+(endNavi+1)+"'>> </a>");
+            }
+            return sb.toString();
+        }
+    }
+
+    public List<FreeBoardDTO> selectBySeqRange(int start, int end) throws Exception {
+        String sql = "select * from (select freeBoard.*, row_number() over(order by write_date desc) rn from freeBoard) where rn between ? and ?";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
+            List<FreeBoardDTO> list = new ArrayList<>();
+            pstat.setInt(1, start);
+            pstat.setInt(2, end);
+            try (ResultSet resultSet = pstat.executeQuery();) {
+                while (resultSet.next()) {
+                    list.add(new FreeBoardDTO(resultSet));
+                }
+                return list;
+            }
+        }
     }
 }

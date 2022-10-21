@@ -106,7 +106,7 @@
                                     class="font-dongle btn btn-outline-primary">수정하기</button></a>
                         </c:when>
                     </c:choose>
-                    <a href="/freeBoard.board">
+                    <a href="/freeBoard.board?cpage=1">
                         <button id="toMypageBtn" class="font-dongle btn btn-outline-primary">목록보기</button>
                     </a>
                     <a href="/">

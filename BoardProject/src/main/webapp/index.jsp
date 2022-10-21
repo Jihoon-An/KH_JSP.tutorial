@@ -21,10 +21,12 @@
                 * {
                     box-sizing: border-box;
                 }
-
+                .main{
+                    
+                }
                 .loginBox {
                     position: absolute;
-                    width: 500px;
+                    width: 400px;
                     height: 300px;
                     left: 50%;
                     top: 40px;
@@ -39,11 +41,13 @@
                 th {
                     padding: 10px;
                 }
+                #main{
+                    width: 500px;
+                }
             </style>
         </head>
 
         <body>
-
             <script>
                 console.log("${loginId}");
                 console.log("${loginId != null}");
@@ -52,7 +56,7 @@
                 <c:when test="${loginId != null}">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <table class="col-4 text-center">
+                            <table id="main" class="text-center">
                                 <tr>
                                     <th colspan=4 style="text-align: center;">
                                         <span>${loginId}님 안녕하세요.</span>
@@ -60,7 +64,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="/freeBoard.board">
+                                        <a href="/freeBoard.board?cpage=1">
                                             <button id="mypage" class="btn btn-outline-primary">자유게시판</button>
                                         </a>
                                     <td>
@@ -124,8 +128,8 @@
 
                 <c:otherwise>
                     <div class="loginBox">
-                        <div class="container">
-                            <div class="row"><a href="/freeBoard.board">
+                        <div class="container">"
+                            <div class="row"><a href='/freeBoard.board?cpage=1'>
                                 <button id="mypage" class="btn btn-outline-primary">자유게시판</button>
                             </a></div>
                             <div id="loginHeader" class="row text-center">

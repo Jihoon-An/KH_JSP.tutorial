@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="row justify-content-center">
-                                <div class="col-3 text-start"><a href="/freeBoard.board" type="button"
+                                <div class="col-3 text-start"><a href="/freeBoard.board?cpage=1" type="button"
                                         class="btn btn-primary font-dongle">게시판 목록</a></div>
                                 <div class="col-3 text-end"><button type="submit" class="font-dongle btn btn-primary">작성하기</button>
                                 </div>

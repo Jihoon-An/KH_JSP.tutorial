@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/test/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/BoardProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/BoardProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freeBoard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freeBoard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePost.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePostModify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/freePostModify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/FreeBoardControllers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/controllers/FreeBoardControllers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +93,14 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Tomcat: BoardProject">
+  <component name="RunManager" selected="Smart Tomcat.BoardProject">
+    <configuration name="getPageNaviTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="getPageNaviTest" />
+      <module name="BoardProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BoardProject" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -172,9 +188,11 @@
       <item itemvalue="Smart Tomcat.jsp_tutorial" />
       <item itemvalue="Smart Tomcat.NetflixManager" />
       <item itemvalue="Smart Tomcat.Tomcat: BoardProject" />
+      <item itemvalue="Application.getPageNaviTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.getPageNaviTest" />
         <item itemvalue="Smart Tomcat.Tomcat: BoardProject" />
       </list>
     </recent_temporary>
@@ -200,17 +218,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

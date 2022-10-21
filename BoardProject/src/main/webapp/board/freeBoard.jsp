@@ -40,7 +40,7 @@
                 }
 
                 #contentsDiv {
-                    height: max-content;
+                    height: 630px;
                 }
 
                 #mainCont {
@@ -100,19 +100,19 @@
                         <c:forEach var="posts" items="${posts}">
                             <a class="contentA" href="/detail.board?postNum=${posts.postNum}">
                                 <div class="row table table-hover content">
-                                    <div class="col-xl-1 col-lg-1 d-none d-xl-block text-center content-seq">
+                                    <div class="col-xl-1 col-lg-1 d-none d-xl-block text-center content-seq font-dongle">
                                         <h2>${posts.postNum}</h2>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-8 text-center content-title">
+                                    <div class="col-xl-6 col-lg-6 col-8 text-center content-title font-dongle">
                                         <h2>${posts.title}</h2>
                                     </div>
-                                    <div class="col-xl-2 col-lg-3 col-2 text-center content-writer">
+                                    <div class="col-xl-2 col-lg-3 col-2 text-center content-writer font-dongle">
                                         <h2>${posts.writer}</h2>
                                     </div>
-                                    <div class="col-xl-2 col-lg-3 d-none d-lg-block text-center content-date">
+                                    <div class="col-xl-2 col-lg-3 d-none d-lg-block text-center content-date font-dongle">
                                         <h2>${posts.writeDate}</h2>
                                     </div>
-                                    <div class="col-2 col-lg-1 text-center content-date">
+                                    <div class="col-2 col-lg-1 text-center content-date font-dongle">
                                         <h2>${posts.viewCount}</h2>
                                     </div>
                                 </div>
@@ -127,14 +127,7 @@
                     <div class="col-2"><a href="/index.jsp"
                             class="font-dongle btn btn-light m-2 border border-info">메인</a></div>
                     <div class="col-8 text-center">
-                        <span class="pageNum">1</span>
-                        <span class="pageNum">2</span>
-                        <span class="pageNum">3</span>
-                        <span class="pageNum">4</span>
-                        <span class="pageNum">5</span>
-                        <span class="pageNum">6</span>
-                        <span class="pageNum">7</span>
-                        <span class="pageNum">8</span>
+                        <span class="pageNum">${navi}</span>
                     </div>
                     <div class="col-2 text-end">
                         <!-- <form action="/freePost.board"><button type="submit"

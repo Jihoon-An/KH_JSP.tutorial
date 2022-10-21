@@ -20,7 +20,11 @@ public class FreeBoardDTO {
         this.title = resultSet.getString("title");
         this.content = resultSet.getString("content");
         this.id = resultSet.getString("writer");
-        this.writer = MembersDAO.getInstance().selectMember(resultSet.getString("writer")).getName();
+        try {
+            this.writer = MembersDAO.getInstance().selectMember(resultSet.getString("writer")).getName();
+        }catch (Exception e){
+            this.writer = "NO NAME";
+        }
         this.writeDate = TimeUtils.timestampToString(resultSet.getTimestamp("write_date"));
         this.postNum = resultSet.getInt("freeBoard_seq");
         this.viewCount = resultSet.getInt("view_count");
@@ -86,5 +90,38 @@ public class FreeBoardDTO {
 
     public void setWriter(String writer) {
         this.writer = writer;
+    }
+
+    int recordTotalCount;
+    int recordCountPerPage;
+    int naviCountPerPage;
+
+    public int getRecordTotalCount() {
+        return recordTotalCount;
+    }
+
+    public void setRecordTotalCount(int recordTotalCount) {
+        this.recordTotalCount = recordTotalCount;
+    }
+
+    public int getRecordCountPerPage() {
+        return recordCountPerPage;
+    }
+
+    public void setRecordCountPerPage(int recordCountPerPage) {
+        this.recordCountPerPage = recordCountPerPage;
+    }
+
+    public int getNaviCountPerPage() {
+        return naviCountPerPage;
+    }
+
+    public void setNaviCountPerPage(int naviCountPerPage) {
+        this.naviCountPerPage = naviCountPerPage;
+    }
+
+    public FreeBoardDTO(int recordCountPerPage, int naviCountPerPage) {
+        this.recordCountPerPage = recordCountPerPage;
+        this.naviCountPerPage = naviCountPerPage;
     }
 }
