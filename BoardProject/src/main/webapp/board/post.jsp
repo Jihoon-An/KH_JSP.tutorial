@@ -92,6 +92,12 @@
                     console.log("${post.content}");
                 </script>
                 <div class="footer text-end">
+                    <button type="button" id="backBtn" class="font-dongle btn btn-outline-primary">뒤로가기</button>
+                    <script>
+                        $("backBtn").click(function(){
+                            history.back;
+                        });
+                    </script>
                     <c:choose>
                         <c:when test="${loginId == post.id}">
                             <a href="/delete.board?postNum=${post.postNum}"><button id="deleteBtn"
