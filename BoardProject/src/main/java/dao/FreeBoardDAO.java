@@ -21,7 +21,7 @@ public class FreeBoardDAO {
         return instance;
     }
 
-    private FreeBoardDAO() throws Exception {
+    private FreeBoardDAO()  {
     }
 
     private Connection getConnection() throws Exception {

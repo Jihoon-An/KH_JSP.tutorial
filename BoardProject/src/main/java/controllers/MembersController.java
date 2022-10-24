@@ -4,7 +4,6 @@ import dao.MembersDAO;
 import dto.MembersDTO;
 
 import java.io.IOException;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("*.member")
-public class MembersControllers extends HttpServlet {
+public class MembersController extends HttpServlet {
 
 //    private static Logger logger = Logger.getGlobal();
 

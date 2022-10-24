@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/CommentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/DaoInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/CommentDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/test/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/FreeBoardControllers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/BoardProject/getPageNaviTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,7 +51,7 @@
     <setting file="file://$PROJECT_DIR$/BoardProject/src/main/webapp/member/dupleCheckView.jsp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/commons/Password.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BoardProject/src/main/java/dto/MembersDTO.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
@@ -54,6 +70,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />

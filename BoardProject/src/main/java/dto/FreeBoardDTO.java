@@ -4,7 +4,6 @@ import commons.TimeUtils;
 import dao.MembersDAO;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class FreeBoardDTO {
     private int postNum;
@@ -25,7 +24,7 @@ public class FreeBoardDTO {
         }catch (Exception e){
             this.writer = "NO NAME";
         }
-        this.writeDate = TimeUtils.timestampToString(resultSet.getTimestamp("write_date"));
+        this.writeDate = TimeUtils.toStringDate(resultSet.getTimestamp("write_date"));
         this.postNum = resultSet.getInt("freeBoard_seq");
         this.viewCount = resultSet.getInt("view_count");
     }

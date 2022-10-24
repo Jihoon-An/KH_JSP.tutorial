@@ -128,7 +128,7 @@
 
                 <c:otherwise>
                     <div class="loginBox">
-                        <div class="container">"
+                        <div class="container">
                             <div class="row"><a href='/freeBoard.board?cpage=1'>
                                 <button id="mypage" class="btn btn-outline-primary">자유게시판</button>
                             </a></div>

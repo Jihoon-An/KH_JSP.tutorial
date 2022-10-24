@@ -1,11 +1,12 @@
 package controllers;
 
+import dao.CommentDAO;
 import dao.FreeBoardDAO;
+import dto.CommentDTO;
 import dto.FreeBoardDTO;
 
 import java.io.IOException;
 import java.util.List;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("*.board")
-public class FreeBoardControllers extends HttpServlet {
+public class FreeBoardController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -41,12 +42,12 @@ public class FreeBoardControllers extends HttpServlet {
 
                     int cpage = Integer.parseInt(request.getParameter("cpage"));
 //                    List<FreeBoardDTO> posts = freeBoardDao.searchAllPosting();
-                    FreeBoardDTO pageInfo = new FreeBoardDTO(10,8);
+                    FreeBoardDTO pageInfo = new FreeBoardDTO(10, 8);
                     String navi = freeBoardDao.getPageNavi(cpage, pageInfo);
 
-                    int start = ((cpage-1) * pageInfo.getRecordCountPerPage()) + 1;
-                    int end = cpage*pageInfo.getRecordCountPerPage();
-                    if(end > pageInfo.getRecordTotalCount()){
+                    int start = ((cpage - 1) * pageInfo.getRecordCountPerPage()) + 1;
+                    int end = cpage * pageInfo.getRecordCountPerPage();
+                    if (end > pageInfo.getRecordTotalCount()) {
                         end = pageInfo.getRecordTotalCount();
                     }
 
@@ -72,20 +73,30 @@ public class FreeBoardControllers extends HttpServlet {
 
                     freeBoardDao.posting(new FreeBoardDTO(id, title, content));
 
-                    response.sendRedirect("/freeBoard.board");
+                    response.sendRedirect("/freeBoard.board?cpage=1");
                     break;
 
+                /*
+                 * Need : postNum
+                 * setAttribute : post, comments
+                 * dispatcher URI : "/board/post.jsp"
+                 */
                 case ("/detail.board"):
                     System.out.println("detail Board");
-
+                    //get posting
                     postNum = Integer.parseInt(request.getParameter("postNum"));
                     post = freeBoardDao.searchPosting(postNum);
-
-                    if (request.getSession().getAttribute("loginId").equals(post.getId())) {
+                    //view count up
+                    if (!(request.getSession().getAttribute("loginId").equals(post.getId()))) {
                         freeBoardDao.viewCountUp(postNum);
                     }
+                    //get comments
+                    List<CommentDTO> comments = new CommentDAO().select(postNum, 1, 3);
+
                     request.setAttribute("post", post);
                     request.setAttribute("category", "자유게시판");
+
+                    request.setAttribute("comments", comments);
 
                     request.getRequestDispatcher("/board/post.jsp").forward(request, response);
                     break;

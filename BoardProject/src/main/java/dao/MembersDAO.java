@@ -126,7 +126,7 @@ public class MembersDAO {
                 String zipcode = resultSet.getString("zipcode");
                 String address1 = resultSet.getString("address1");
                 String address2 = resultSet.getString("address2");
-                String signupDate = TimeUtils.timestampToString(resultSet.getTimestamp("signup_date"));
+                String signupDate = TimeUtils.toStringDate(resultSet.getTimestamp("signup_date"));
                 return new MembersDTO(id, "", name, phone, email, zipcode, address1, address2, signupDate);
             }
             return null;
