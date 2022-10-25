@@ -32,7 +32,7 @@
 
                 .container {
                     width: 800px;
-                    height: 640px;
+                    height: max-content;
                     margin: auto;
                     margin-top: 50px;
                     border: 3px solid rgb(56, 150, 244);
@@ -127,8 +127,16 @@
                         <span class="fs-6 mx-3 mt-0 font-dongle">조회수 ${post.viewCount}</span>
                     </div>
                 </div>
-                <div class="row main" id="content">
-                    <textarea id="postContent" readonly>${post.content}</textarea>
+                <div class="row main justify-content-end" id="content">
+                    <div class="col-2">
+                        <h5>File List</h5>
+                    </div>
+                    <div class="col-10">
+                        <c:forEach var="file" items="${files}">
+                            <div><a href="/files/${file.sysName}">${file.outNum}. ${file.originName}</a></div>
+                        </c:forEach>
+                    </div>
+                    <textarea class="col-12" id="postContent" readonly>${post.content}</textarea>
                 </div>
                 <div class="footer text-end">
                     <button type="button" id="backBtn" class="font-dongle btn btn-outline-primary">뒤로가기</button>

@@ -52,12 +52,12 @@
                     <a href="/index.jsp">메인 화면으로 가기</a>
                 </c:when>
                 <c:otherwise>
-                    <div id="headCont" class="container p-5">
+                    <div id="headCont" class="container p-3">
                         <div class="row text-center">
                             <h1 class="font-yeonsung">글 작성</h1>
                         </div>
                     </div>
-                    <form method="post" action="/postInFreeBoard.board">
+                    <form method="post" action="/postInFreeBoard.board" enctype="multipart/form-data">
                         <div id="postCont" class="container">
                             <div class="row justify-content-center">
                                 <div class="col-6">
@@ -65,6 +65,9 @@
                                         <span class="col-2 border border-info bg-light text-center">제목</span>
                                         <input type="text" class="input" id="title" name="title"
                                             aria-describedby="basic-addon3">
+                                    </div>
+                                    <div class="mb-2">
+                                        <input class="form-control m-0" type="file" id="formFile" name="file">
                                     </div>
                                     <div class="row">
                                         <span class="col-2 border border-info bg-light text-center">내용</span>
@@ -77,7 +80,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-3 text-start"><a href="/freeBoard.board?cpage=1" type="button"
                                         class="btn btn-primary font-dongle">게시판 목록</a></div>
-                                <div class="col-3 text-end"><button type="submit" class="font-dongle btn btn-primary">작성하기</button>
+                                <div class="col-3 text-end"><button type="submit"
+                                        class="font-dongle btn btn-primary">작성하기</button>
                                 </div>
                             </div>
                         </div>

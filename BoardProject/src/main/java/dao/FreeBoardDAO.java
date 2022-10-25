@@ -31,14 +31,15 @@ public class FreeBoardDAO {
     }
 
     public int posting(FreeBoardDTO dto) throws Exception {
-        String sql = "insert into freeBoard values(freeBoard_seq.nextval,?,?,?,sysdate,0)";
+        String sql = "insert into freeBoard values(?,?,?,?,sysdate,0)";
 
         try (Connection con = this.getConnection();
              PreparedStatement pstat = con.prepareStatement(sql);
         ) {
-            pstat.setString(1, dto.getWriter());
-            pstat.setString(2, dto.getTitle());
-            pstat.setString(3, dto.getContent());
+            pstat.setInt(1, dto.getPostNum());
+            pstat.setString(2, dto.getWriter());
+            pstat.setString(3, dto.getTitle());
+            pstat.setString(4, dto.getContent());
 
             int result = pstat.executeUpdate();
 
@@ -192,4 +193,18 @@ public class FreeBoardDAO {
             }
         }
     }
+
+    public int getPostSeq() throws Exception{
+        String sql = "select freeBoard_seq.nextval freeBoard_seq from dual";
+        try (
+                Connection con = this.getConnection();
+                PreparedStatement pstat = con.prepareStatement(sql);
+        ) {
+            try (ResultSet resultSet = pstat.executeQuery()) {
+                resultSet.next();
+                return resultSet.getInt("freeBoard_seq");
+            }
+        }
+    }
+
 }

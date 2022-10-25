@@ -27,8 +27,17 @@ public class TimeUtils {
 
     public static String toStringDate(Timestamp time){
         String date;
-//        Timestamp stamp = new Timestamp(System.currentTimeMillis());
-        date = new SimpleDateFormat("yyyy년 MM월dd일").format(time);
+        Timestamp now = new Timestamp(System.currentTimeMillis());
+        long diffTime = (now.getTime()- time.getTime())/60000;
+        if(diffTime < 60){
+            date = String.valueOf(diffTime) + "분 전";
+        }
+        else if(diffTime < (60*24)){
+            date = String.valueOf(diffTime/60) + "시간 전";
+        }
+        else {
+            date = new SimpleDateFormat("yyyy년 MM월dd일").format(time);
+        }
         return date;
     }
 }

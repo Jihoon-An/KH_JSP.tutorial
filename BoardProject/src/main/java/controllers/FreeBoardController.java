@@ -1,10 +1,15 @@
 package controllers;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import dao.CommentDAO;
+import dao.FilesDAO;
 import dao.FreeBoardDAO;
 import dto.CommentDTO;
+import dto.FilesDTO;
 import dto.FreeBoardDTO;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.annotation.WebServlet;
@@ -23,14 +28,6 @@ public class FreeBoardController extends HttpServlet {
 
         String uri = request.getRequestURI();
 
-        FreeBoardDTO post;
-
-        String id;
-        String writer;
-        String content;
-        String title;
-        int postNum;
-
         try {
 
             FreeBoardDAO freeBoardDao = FreeBoardDAO.getInstance();
@@ -42,7 +39,7 @@ public class FreeBoardController extends HttpServlet {
                 set : X
                 Next URI : "/board/freePost.jsp"
                  */
-                case ("/freeBoard.board"):
+                case ("/freeBoard.board"): {
                     System.out.println("page freeBoard");
 
                     int cpage = Integer.parseInt(request.getParameter("cpage"));
@@ -62,45 +59,64 @@ public class FreeBoardController extends HttpServlet {
                     request.setAttribute("navi", navi);
                     request.getRequestDispatcher("/board/freeBoard.jsp").forward(request, response);
                     break;
+                }
 
                 /*
                 Need : X
                 set : X
                 Next URI : "/board/freePost.jsp"
                  */
-                case ("/freePost.board"):
+                case ("/freePost.board"): {
                     System.out.println("page freePost");
 
                     response.sendRedirect("/board/freePost.jsp");
                     break;
+                }
 
                 /*
                 Need : loginId -> id, title, content
                 set : cpage
                 Next URI : "/freeBoard.board?cpage=1"
                  */
-                case ("/postInFreeBoard.board"):
+                case ("/postInFreeBoard.board"): {
                     System.out.println("post In FreeBoard");
+                    //업로드파일생성
+                    String savePath = request.getServletContext().getRealPath("/files"); //런타임 webapp 폴더를 불러옴.
+                    File fileSavePath = new File(savePath);
+                    if (!fileSavePath.exists()) { //find directory
+                        fileSavePath.mkdir();//make directory
+                    }
+                    //파일업로드
+                    int maxSize = 1024 * 1024 * 10;
+                    MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF8", new DefaultFileRenamePolicy());
+                    String originName = multi.getOriginalFileName("file");
+                    String sysName = multi.getFilesystemName("file");
 
-                    id = (String) request.getSession().getAttribute("loginId");
-                    title = request.getParameter("title");
-                    content = request.getParameter("content");
+                    int postNum = freeBoardDao.getPostSeq();
+                    FilesDTO filesDTO = new FilesDTO(0, 0, originName, sysName, postNum);
 
-                    freeBoardDao.posting(new FreeBoardDTO(id, title, content));
+                    FilesDAO.getInstance().insert(filesDTO);
+
+                    String id = (String) request.getSession().getAttribute("loginId");
+                    String title = multi.getParameter("title");
+                    String content = multi.getParameter("content");
+                    //글작성
+                    freeBoardDao.posting(new FreeBoardDTO(id, title, content, postNum));
 
                     response.sendRedirect("/freeBoard.board?cpage=1");
                     break;
+                }
 
                 /*
                  * Need : postNum
                  * Set : post, comments
                  * Next URI : "/board/post.jsp"
                  */
-                case ("/detail.board"):
+                case ("/detail.board"): {
                     System.out.println("detail Board");
                     //get posting
-                    postNum = Integer.parseInt(request.getParameter("postNum"));
-                    post = freeBoardDao.searchPosting(postNum);
+                    int postNum = Integer.parseInt(request.getParameter("postNum"));
+                    FreeBoardDTO post = freeBoardDao.searchPosting(postNum);
                     String loginId = (String) request.getSession().getAttribute("loginId");
                     //view count up
                     if (loginId == null || !loginId.equals(post.getId())) {
@@ -114,62 +130,69 @@ public class FreeBoardController extends HttpServlet {
 
                     request.setAttribute("comments", comments);
 
+                    // 파일 불러오기
+                    List<FilesDTO> files = FilesDAO.getInstance().selectAll(postNum);
+                    request.setAttribute("files", files);
+
                     request.getRequestDispatcher("/board/post.jsp").forward(request, response);
                     break;
-
+                }
                 /*
                 Need : postNum
                 set : X
                 Next URI : "/freeBoard.board?cpage=1"
                  */
-                case ("/delete.board"):
+                case ("/delete.board"): {
                     System.out.println("detail Board");
 
-                    postNum = Integer.parseInt(request.getParameter("postNum"));
+                    int postNum = Integer.parseInt(request.getParameter("postNum"));
                     FreeBoardDAO.getInstance().deletePosting(postNum);
 
                     response.sendRedirect("/freeBoard.board?cpage=1");
                     break;
-
+                }
                 /*
                 Need : postNum
                 set : post
                 Next URI : "/board/freePostModify.jsp"
                  */
-                case ("/toModify.board"):
+                case ("/toModify.board"): {
                     System.out.println("to modify Board");
-
-                    post = freeBoardDao.searchPosting(Integer.parseInt(request.getParameter("postNum")));
+                    int postNum = Integer.parseInt(request.getParameter("postNum"));
+                    FreeBoardDTO post = freeBoardDao.searchPosting(postNum);
 
                     request.setAttribute("post", post);
 
+                    List<FilesDTO> files = FilesDAO.getInstance().selectAll(postNum);
+                    request.setAttribute("files", files);
+
                     request.getRequestDispatcher("/board/freePostModify.jsp").forward(request, response);
                     break;
-
+                }
                  /*
                 Need : loginId -> id, title, content, postNum
                 set : postNum
                 Next URI : "/detail.board?postNum=" + postNum
                  */
-                case ("/modify.board"):
+                case ("/modify.board"): {
                     System.out.println("modify Board");
 
-                    id = (String) request.getSession().getAttribute("loginId");
-                    title = request.getParameter("title");
-                    content = request.getParameter("content");
-                    postNum = Integer.parseInt(request.getParameter("postNum"));
+                    String id = (String) request.getSession().getAttribute("loginId");
+                    String title = request.getParameter("title");
+                    String content = request.getParameter("content");
+                    int postNum = Integer.parseInt(request.getParameter("postNum"));
 
-                    post = new FreeBoardDTO(id, title, content);
-                    post.setPostNum(postNum);
+                    FreeBoardDTO post = new FreeBoardDTO(id, title, content, postNum);
 
                     FreeBoardDAO.getInstance().modifyPosting(post);
 
                     response.sendRedirect("/detail.board?postNum=" + postNum);
                     break;
-
-                default:
+                }
+                default: {
                     System.out.println("error");
                     response.sendRedirect("/error.jsp");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

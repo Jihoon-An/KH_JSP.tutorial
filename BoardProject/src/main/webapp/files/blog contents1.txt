@@ -1,0 +1,47 @@
+[Spring]
+DI (Dependency Injection)
+AllArgsConstructor
+
+[Deep Leaning]
+
+[Java]
+Optional<>
+문자열인 배열 항목 추가하기
+Java module이란
+Gradle과 Maven의 차이
+스택(Stack)과 힙(Heap)
+https://coding-factory.tistory.com/524
+Stream
+ArrayList
+static, instance 메서드필드, class 메서드필드
+Map
+정규표현식
+HashMap
+"? : "사용법
+------------------------------------------------------------
+    String checkMBTI(MBTI mbti) {
+        String answer = mbti.R >= mbti.T ? "R" : "T";
+        answer += mbti.C >= mbti.F ? "C" : "F";
+        answer += mbti.J >= mbti.M ? "J" : "M";
+        answer += mbti.A >= mbti.N ? "A" : "N";
+
+        return answer;
+    }
+------------------------------------------------------------
+
+[python]
+2차원 배열 항목 추가하기
+2중 for문 탈출하기(for문의 else)
+    for y in range(n):  # play_x, play_y 최신화
+        for x in range(n):
+            if board[y, x] == 0:
+                play_x = x
+                play_y = y
+                break
+        else:
+            continue
+        break
+[기타]
+언어별 명명규칙
+자료형 구조
+(알고리즘) 배열의 모든 경우의 수 만들기

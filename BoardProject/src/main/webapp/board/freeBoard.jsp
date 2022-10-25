@@ -17,7 +17,8 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
                 crossorigin="anonymous"></script>
-
+            <!-- icon -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" rel="stylesheet">
             <!-- font -->
             <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Yeon+Sung&display=swap"
                 rel="stylesheet">
@@ -57,14 +58,15 @@
                     cursor: pointer;
                 }
 
-                .contentA{
+                .contentA {
                     text-decoration: none;
                 }
-         
+
                 .content {
                     font-family: 'Dongle', sans-serif;
                 }
-                .content:hover{
+
+                .content:hover {
                     background-color: rgb(222, 235, 241);
                 }
             </style>
@@ -81,7 +83,7 @@
 
                 <div id="colName" class="row bg-info">
                     <div class="col-xl-1 d-none d-xl-block"></div>
-                    <div class="col-xl-6 col-lg-6 col-8 text-center font-yeonsung">
+                    <div class="col-xl-6 col-lg-6 col-8 text-start font-yeonsung">
                         <h2>제목</h2>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-2 text-center font-yeonsung">
@@ -97,23 +99,25 @@
 
                 <div class="row bg-light" id="contentsDiv">
                     <div class="col" id="contents">
-                        <c:forEach var="posts" items="${posts}">
-                            <a class="contentA" href="/detail.board?postNum=${posts.postNum}">
+                        <c:forEach var="post" items="${posts}">
+                            <a class="contentA" href="/detail.board?postNum=${post.postNum}">
                                 <div class="row table table-hover content">
-                                    <div class="col-xl-1 col-lg-1 d-none d-xl-block text-center content-seq font-dongle">
-                                        <h2>${posts.postNum}</h2>
+                                    <div
+                                        class="col-xl-1 col-lg-1 d-none d-xl-block text-center content-seq font-dongle">
+                                        <h2>${post.postNum}</h2>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-8 text-center content-title font-dongle">
-                                        <h2>${posts.title}</h2>
+                                    <div class="col-xl-6 col-lg-6 col-8 text-start content-title font-dongle">
+                                        <h2>${post.title}<i class="text-danger fa-solid fa-n fs-6" style="display: ${post.displayNew};"></i></h2>
                                     </div>
                                     <div class="col-xl-2 col-lg-3 col-2 text-center content-writer font-dongle">
-                                        <h2>${posts.writer}</h2>
+                                        <h2>${post.writer}</h2>
                                     </div>
-                                    <div class="col-xl-2 col-lg-3 d-none d-lg-block text-center content-date font-dongle">
-                                        <h2>${posts.writeDate}</h2>
+                                    <div
+                                        class="col-xl-2 col-lg-3 d-none d-lg-block text-center content-date font-dongle">
+                                        <h2>${post.writeDate}</h2>
                                     </div>
                                     <div class="col-2 col-lg-1 text-center content-date font-dongle">
-                                        <h2>${posts.viewCount}</h2>
+                                        <h2>${post.viewCount}</h2>
                                     </div>
                                 </div>
                             </a>

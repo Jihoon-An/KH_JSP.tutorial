@@ -1,0 +1,16 @@
+Kotlin, Java, Gradle
+Netty, Spring Mvc, Spring Webflux, Spring Boot, Spring Cloud Gateway, Spring Cloud Config
+JPA/Hibernate, MySQL, MongoDB, Hadoop, Redis, Memcached, Zookeeper
+Kubernetes + Istio, Haproxy, Nginx
+GoCD, ArgoCD, Consul, Vault, Git, Docker, Spinnaker, Jenkins, Ceph, Harbor
+Kafka, ELK, Prometheus + Thanos, influxData, Grafana
+
+
+대용량 메시지 발송, ABtest , API gateway, AML/FDS, APM, Monitoring & Alert System, ELK, Haproxy 등
+
+
+
+Java 기술 생태계 (Kotlin/Spring/JPA)에 대한 이해도와 엔지니어링 역량(OOP/TDD/Refactoring)을 보유하신 분이면 더 좋아요.
+Redis와 Kafka를 사용한 경험을 보유하신 분이면 더 좋아요.
+RDBMS에 대한 높은 이해도를 보유하신 분이라면 더 좋아요.
+Spring Framework 기반의 B2C 서비스 개발 경험이 있다면 작성해주세요.

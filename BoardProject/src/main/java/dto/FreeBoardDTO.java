@@ -13,6 +13,7 @@ public class FreeBoardDTO {
     private String writer;
     private String writeDate;
     private int viewCount;
+    private String displayNew;
 
 
     public FreeBoardDTO(ResultSet resultSet) throws Exception {
@@ -25,14 +26,16 @@ public class FreeBoardDTO {
             this.writer = "NO NAME";
         }
         this.writeDate = TimeUtils.toStringDate(resultSet.getTimestamp("write_date"));
+        this.displayNew = (this.writeDate.length() < 10) ?  "inline" : "none";
         this.postNum = resultSet.getInt("freeBoard_seq");
         this.viewCount = resultSet.getInt("view_count");
     }
 
-    public FreeBoardDTO(String writer, String title, String content) {
+    public FreeBoardDTO(String writer, String title, String content, int postNum) {
         this.writer = writer;
         this.title = title;
         this.content = content;
+        this.postNum = postNum;
     }
 
     public String getId() {
@@ -89,6 +92,14 @@ public class FreeBoardDTO {
 
     public void setWriter(String writer) {
         this.writer = writer;
+    }
+
+    public String getDisplayNew() {
+        return displayNew;
+    }
+
+    public void setDisplayNew(String displayNew) {
+        this.displayNew = displayNew;
     }
 
     int recordTotalCount;

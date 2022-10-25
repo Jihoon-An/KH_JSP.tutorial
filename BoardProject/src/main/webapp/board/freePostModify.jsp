@@ -57,7 +57,17 @@
                             <h1 class="font-yeonsung">글 수정</h1>
                         </div>
                     </div>
-                    <form method="post" action="/modify.board" >
+                    <div class="row main justify-content-end" id="content">
+                        <div class="col-2">
+                            <h5>File List</h5>
+                        </div>
+                        <div class="col-10">
+                            <c:forEach var="file" items="${files}">
+                                <div><a href="/files/${file.sysName}">${file.outNum}. ${file.originName}</a></div>
+                            </c:forEach>
+                        </div>
+                    </div>
+                    <form method="post" action="/modify.board">
                         <div id="postCont" class="container">
                             <div class="row justify-content-center">
                                 <div class="col-6">
@@ -69,18 +79,18 @@
                                     <div class="row">
                                         <span class="col-2 border border-info bg-light text-center">내용</span>
                                         <textarea type="text" class="input" id="content" name="content"
-                                        aria-describedby="basic-addon3">${post.content}</textarea>
+                                            aria-describedby="basic-addon3">${post.content}</textarea>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="row justify-content-center">
                                 <div class="col-3 text-start"><a href="/freeBoard.board?cpage=1" type="button"
-                                    class="btn btn-primary font-dongle">취소하기</a></div>
-                                    <div class="col-3 text-end">
-                                        <input type="hidden" name="postNum" value="${post.postNum}">
-                                        <button type="submit" class="font-dongle btn btn-primary">수정하기</button>
-                                    </div>
+                                        class="btn btn-primary font-dongle">취소하기</a></div>
+                                <div class="col-3 text-end">
+                                    <input type="hidden" name="postNum" value="${post.postNum}">
+                                    <button type="submit" class="font-dongle btn btn-primary">수정하기</button>
+                                </div>
                             </div>
                         </div>
                     </form>
