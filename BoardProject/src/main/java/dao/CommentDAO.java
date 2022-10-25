@@ -41,7 +41,7 @@ public class CommentDAO {
             pstat.setString(1, dto.getWriterId());
             pstat.setString(2, dto.getContents());
             pstat.setInt(3, dto.getPostNum());
-            System.out.println(dto.getWriterId() + dto.getContents() + dto.getPostNum());
+
             pstat.executeUpdate();
 
             con.commit();

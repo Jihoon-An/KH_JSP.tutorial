@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/CommentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/DaoInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/CommentDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/commons/TimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/FreeBoardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/MembersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dto/FreeBoardDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/FreeBoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/dao/CommentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/dao/CommentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/board/post.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/test/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/FreeBoardControllers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dao/FreeBoardDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/dto/FreeBoardDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/BoardProject/getPageNaviTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

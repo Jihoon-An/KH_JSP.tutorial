@@ -37,6 +37,11 @@ public class FreeBoardController extends HttpServlet {
 
             switch (uri) {
 
+                /*
+                Need : cpage
+                set : X
+                Next URI : "/board/freePost.jsp"
+                 */
                 case ("/freeBoard.board"):
                     System.out.println("page freeBoard");
 
@@ -58,12 +63,22 @@ public class FreeBoardController extends HttpServlet {
                     request.getRequestDispatcher("/board/freeBoard.jsp").forward(request, response);
                     break;
 
+                /*
+                Need : X
+                set : X
+                Next URI : "/board/freePost.jsp"
+                 */
                 case ("/freePost.board"):
                     System.out.println("page freePost");
 
                     response.sendRedirect("/board/freePost.jsp");
                     break;
 
+                /*
+                Need : loginId -> id, title, content
+                set : cpage
+                Next URI : "/freeBoard.board?cpage=1"
+                 */
                 case ("/postInFreeBoard.board"):
                     System.out.println("post In FreeBoard");
 
@@ -78,16 +93,17 @@ public class FreeBoardController extends HttpServlet {
 
                 /*
                  * Need : postNum
-                 * setAttribute : post, comments
-                 * dispatcher URI : "/board/post.jsp"
+                 * Set : post, comments
+                 * Next URI : "/board/post.jsp"
                  */
                 case ("/detail.board"):
                     System.out.println("detail Board");
                     //get posting
                     postNum = Integer.parseInt(request.getParameter("postNum"));
                     post = freeBoardDao.searchPosting(postNum);
+                    String loginId = (String) request.getSession().getAttribute("loginId");
                     //view count up
-                    if (!(request.getSession().getAttribute("loginId").equals(post.getId()))) {
+                    if (loginId == null || !loginId.equals(post.getId())) {
                         freeBoardDao.viewCountUp(postNum);
                     }
                     //get comments
@@ -101,15 +117,25 @@ public class FreeBoardController extends HttpServlet {
                     request.getRequestDispatcher("/board/post.jsp").forward(request, response);
                     break;
 
+                /*
+                Need : postNum
+                set : X
+                Next URI : "/freeBoard.board?cpage=1"
+                 */
                 case ("/delete.board"):
                     System.out.println("detail Board");
 
                     postNum = Integer.parseInt(request.getParameter("postNum"));
                     FreeBoardDAO.getInstance().deletePosting(postNum);
 
-                    response.sendRedirect("/freeBoard.board");
+                    response.sendRedirect("/freeBoard.board?cpage=1");
                     break;
 
+                /*
+                Need : postNum
+                set : post
+                Next URI : "/board/freePostModify.jsp"
+                 */
                 case ("/toModify.board"):
                     System.out.println("to modify Board");
 
@@ -120,6 +146,11 @@ public class FreeBoardController extends HttpServlet {
                     request.getRequestDispatcher("/board/freePostModify.jsp").forward(request, response);
                     break;
 
+                 /*
+                Need : loginId -> id, title, content, postNum
+                set : postNum
+                Next URI : "/detail.board?postNum=" + postNum
+                 */
                 case ("/modify.board"):
                     System.out.println("modify Board");
 

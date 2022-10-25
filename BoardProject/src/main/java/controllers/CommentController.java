@@ -48,11 +48,12 @@ public class CommentController extends HttpServlet {
                     request.setAttribute("postNum",postNum);
                     request.getRequestDispatcher("/detail.board").forward(request, response);
                     break;
-                    /*
-                    Need : commentNum,postNum
-                    set : postNum
-                    dispatcher URI : "/board/post.jsp"
-                     */
+
+                /*
+                Need : commentNum,postNum
+                set : postNum
+                dispatcher URI : "/board/post.jsp"
+                 */
                 case ("/delete.comment"):
                     System.out.println("/delete.comment");
                     int commentNum = Integer.parseInt(request.getParameter("commentNum"));
@@ -69,8 +70,7 @@ public class CommentController extends HttpServlet {
 
                     writer = (String) request.getSession().getAttribute("loginId");
                     contents = request.getParameter("contents");
-                    System.out.println(contents);
-                    System.out.println();
+
                     postNum = Integer.parseInt(request.getParameter("postNum"));
                     CommentDTO dto = new CommentDTO(writer, contents, postNum);
                     dto.setCommentNum(Integer.parseInt(request.getParameter("commentNum")));

@@ -151,7 +151,7 @@
                     </a>
                 </div>
                 <div class="comments row pt-2">
-                    <form method="post" action="/insert.comment" id="writeForm" class="p-0 m-0" >
+                    <form method="post" action="/insert.comment" id="writeForm" class="p-0 m-0">
                         <div class="row mx-1">
                             <div class="col-5">
                                 <h6 class="font-yeonsung" style="transform:translate(0,10px);">댓글 달기</h6>
@@ -188,23 +188,28 @@
                                     <span class="font-yeonsung">${comment.writerName}</span>
                                     <span class="font-dongle px-2 fs-6">${comment.writeTime}</span>
                                 </div>
-                                
-                                <div class="col-6 text-end">
-                                    <button type="button" class="commentBtn modifyBtn" id="modifyComment" style="display:inline;">수정</button>
-                                    <button type="button" class="commentBtn completeBtn" id="completeBtn" style="display: none;">완료</button>
-                                    <a href="/delete.comment?commentNum=${comment.commentNum}&postNum=${post.postNum}">
-                                        <button type="button" class="commentBtn" id="deleteComment">삭제</button>
-                                    </a>
-                                </div>
-                                
+
+                                <c:if test="${loginId == comment.writerId}">
+
+                                    <div class="col-6 text-end">
+                                        <button type="button" class="commentBtn modifyBtn" id="modifyComment"
+                                            style="display:inline;">수정</button>
+                                        <button type="button" class="commentBtn completeBtn" id="completeBtn"
+                                            style="display: none;">완료</button>
+                                        <a
+                                            href="/delete.comment?commentNum=${comment.commentNum}&postNum=${post.postNum}">
+                                            <button type="button" class="commentBtn" id="deleteComment">삭제</button>
+                                        </a>
+                                    </div>
+                                </c:if>
                                 <input type="hidden" name="writerId" value="${comment.writerId}">
-                                <input type="hidden" name="commentNum" value="${comment.commentNum}" >
-                                <input type="hidden" name="postNum" value="${post.postNum}" >
+                                <input type="hidden" name="commentNum" value="${comment.commentNum}">
+                                <input type="hidden" name="postNum" value="${post.postNum}">
 
                             </div>
                             <div class="row px-1">
                                 <div id="commentContents" class="commentText" readonly>${comment.contents}</div>
-                                    <input class="commentInput" type="hidden" name="contents" value="">
+                                <input class="commentInput" type="hidden" name="contents" value="">
                             </div>
                         </div>
                     </form>
@@ -218,12 +223,12 @@
                 var forms = document.getElementsByClassName("modifyForm");
                 var length = forms.length;
 
-                $(".modifyBtn").click(function(){
-                    $(this).css("display","none");
-                    $(this).parent().children(".completeBtn").css("display","inline");
-                    $(this).closest("form").find(".commentText").attr("contenteditable", "true");
+                $(".modifyBtn").click(function () {
+                    $(this).css("display", "none");
+                    $(this).parent().children(".completeBtn").css("display", "inline");
+                    $(this).closest("form").find(".commentText").attr("contenteditable", "true").focus();
                 });
-                $(".completeBtn").click(function(){
+                $(".completeBtn").click(function () {
                     $(this).closest("form").find(".commentInput").val($(this).closest("form").find(".commentText").html());
                     $(this).closest("form").submit();
                 });
