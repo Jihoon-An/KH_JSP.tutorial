@@ -35,9 +35,10 @@ public class MembersController extends HttpServlet {
                 String id = request.getParameter("id");
                 boolean result = dao.isIdExist(id);
 
-                request.setAttribute("result", result);
-                request.setAttribute("id", id);
-                request.getRequestDispatcher("dupleCheckView.jsp").forward(request, response);
+//                request.setAttribute("result", result);
+//                request.setAttribute("id", id);
+//                request.getRequestDispatcher("dupleCheckView.jsp").forward(request, response);
+                response.getWriter().append(String.valueOf(result));
             } catch (Exception e) {
                 e.printStackTrace();
                 response.sendRedirect("/");

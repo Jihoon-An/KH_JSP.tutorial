@@ -18,5 +18,6 @@
     <orderEntry type="library" name="commons-dbcp2-2.1.1" level="project" />
     <orderEntry type="library" name="javax.servlet-api-3.1.0" level="application" />
     <orderEntry type="library" name="cos" level="project" />
+    <orderEntry type="library" name="gson-2.10" level="project" />
   </component>
 </module>

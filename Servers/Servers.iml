@@ -6,5 +6,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="cos" level="project" />
+    <orderEntry type="library" name="gson-2.10" level="project" />
   </component>
 </module>

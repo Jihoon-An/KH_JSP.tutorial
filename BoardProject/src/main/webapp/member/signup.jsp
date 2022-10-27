@@ -81,16 +81,36 @@
                                     idCheck = false;
                                     if ($("#id").val() == "") {
                                         $("#idHead").css("background-color", "azure");
-                                    } else{
+                                    } else {
                                         $("#idHead").css("background-color", "rgb(60, 250, 89)");
                                     }
                                 });
-                                
+
                                 function idConfirm() {
                                     if ($("#id").val() != "") {
                                         if (/^\w{6,20}$/.test($("#id").val())) {
-                                            console.log(idCheck);
-                                            window.open("dupleCheck.member?id=" + $("#id").val(), "", "width=400, height=300")
+                                            //window.open("dupleCheck.member?id=" + $("#id").val(), "", "width=400, height=300")
+                                            $.ajax({
+                                                url: "dupleCheck.member",
+                                                type: "post",
+                                                data: {
+                                                    id: $("#id").val()
+                                                }
+                                            }).done(function (response) {
+                                                console.log(response);
+                                                if (response == "false") {
+                                                    document.getElementById("idHead").style = "background-color:aqua;";
+                                                    idCheck = true;
+                                                    Swal.fire('사용가능한 아이디 입니다.');
+
+                                                }
+                                                else {
+                                                    document.getElementById("id").value = "";
+                                                    document.getElementById("idHead").style = "background-color:red;";
+                                                    idCheck = false;
+                                                    Swal.fire('중복된 아이디 입니다.');
+                                                }
+                                            });
                                             //idCheck = true;
                                         }
                                         // 페이지를 열면서 데이터 전송.
