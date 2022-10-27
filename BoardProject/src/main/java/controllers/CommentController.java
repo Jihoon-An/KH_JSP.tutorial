@@ -34,7 +34,7 @@ public class CommentController extends HttpServlet {
                     String contents = request.getParameter("contents");
                     int postNum = Integer.parseInt(request.getParameter("postNum"));
 
-                    new CommentDAO().insert(new CommentDTO(writer, contents, postNum));
+                    CommentDAO.getInstance().insert(new CommentDTO(writer, contents, postNum));
 
                     request.setAttribute("postNum", postNum);
                     request.getRequestDispatcher("/detail.board").forward(request, response);
@@ -48,7 +48,7 @@ public class CommentController extends HttpServlet {
                 case ("/delete.comment"): {
                     System.out.println("/delete.comment");
                     int commentNum = Integer.parseInt(request.getParameter("commentNum"));
-                    new CommentDAO().delete(commentNum);
+                    CommentDAO.getInstance().delete(commentNum);
 
                     request.setAttribute("postNum", request.getParameter("postNum"));
                     request.getRequestDispatcher("/detail.board").forward(request, response);
@@ -66,7 +66,7 @@ public class CommentController extends HttpServlet {
                     int postNum = Integer.parseInt(request.getParameter("postNum"));
                     CommentDTO dto = new CommentDTO(writer, contents, postNum);
                     dto.setCommentNum(Integer.parseInt(request.getParameter("commentNum")));
-                    new CommentDAO().modify(dto);
+                    CommentDAO.getInstance().modify(dto);
 
                     request.setAttribute("postNum", postNum);
                     request.getRequestDispatcher("/detail.board").forward(request, response);

@@ -11,6 +11,7 @@ import dto.FreeBoardDTO;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -80,6 +81,7 @@ public class FreeBoardController extends HttpServlet {
                  */
                 case ("/postInFreeBoard.board"): {
                     System.out.println("post In FreeBoard");
+                    int postNum = freeBoardDao.getPostSeq();
                     //업로드파일생성
                     String savePath = request.getServletContext().getRealPath("/files"); //런타임 webapp 폴더를 불러옴.
                     File fileSavePath = new File(savePath);
@@ -89,18 +91,27 @@ public class FreeBoardController extends HttpServlet {
                     //파일업로드
                     int maxSize = 1024 * 1024 * 10;
                     MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF8", new DefaultFileRenamePolicy());
-                    String originName = multi.getOriginalFileName("file");
-                    String sysName = multi.getFilesystemName("file");
 
-                    int postNum = freeBoardDao.getPostSeq();
-                    FilesDTO filesDTO = new FilesDTO(0, 0, originName, sysName, postNum);
+                    Enumeration<String> e = multi.getFileNames();//file들을 모두 가지고 옴
+                    while(e.hasMoreElements()){ //하나씩 넘어가며 있으면 가져옴
+                        String name = e.nextElement();
+                        String originName = multi.getOriginalFileName(name);
+                        String sysName = multi.getFilesystemName(name);
+                        FilesDTO filesDTO = new FilesDTO(0, 0, originName, sysName, postNum);
+                        FilesDAO.getInstance().insert(filesDTO);
+                    }
+//
+//                    String originName = multi.getOriginalFileName("file");
+//                    String sysName = multi.getFilesystemName("file");
+//
+//                    FilesDTO filesDTO = new FilesDTO(0, 0, originName, sysName, postNum);
+//
+//                    FilesDAO.getInstance().insert(filesDTO);
 
-                    FilesDAO.getInstance().insert(filesDTO);
-
+                    //글작성
                     String id = (String) request.getSession().getAttribute("loginId");
                     String title = multi.getParameter("title");
                     String content = multi.getParameter("content");
-                    //글작성
                     freeBoardDao.posting(new FreeBoardDTO(id, title, content, postNum));
 
                     response.sendRedirect("/freeBoard.board?cpage=1");
@@ -123,7 +134,7 @@ public class FreeBoardController extends HttpServlet {
                         freeBoardDao.viewCountUp(postNum);
                     }
                     //get comments
-                    List<CommentDTO> comments = new CommentDAO().select(postNum, 1, 3);
+                    List<CommentDTO> comments = CommentDAO.getInstance().select(postNum, 1, 3);
 
                     request.setAttribute("post", post);
                     request.setAttribute("category", "자유게시판");

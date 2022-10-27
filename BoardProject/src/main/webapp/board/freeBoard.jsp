@@ -22,6 +22,8 @@
             <!-- font -->
             <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Yeon+Sung&display=swap"
                 rel="stylesheet">
+            <!-- animation -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
             <style>
                 .font-dongle {
                     line-height: 80%;
@@ -83,7 +85,7 @@
 
                 <div id="colName" class="row bg-info">
                     <div class="col-xl-1 d-none d-xl-block"></div>
-                    <div class="col-xl-6 col-lg-6 col-8 text-start font-yeonsung">
+                    <div class="col-xl-6 col-lg-6 col-8 text-center font-yeonsung">
                         <h2>제목</h2>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-2 text-center font-yeonsung">
@@ -107,7 +109,9 @@
                                         <h2>${post.postNum}</h2>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-8 text-start content-title font-dongle">
-                                        <h2>${post.title}<i class="text-danger fa-solid fa-n fs-6" style="display: ${post.displayNew};"></i></h2>
+                                        <h2>${post.title}<i class="bi bi-clock-history animate__animated animate__flash animate__infinite
+                                            text-danger fa-solid fa-n fs-6"
+                                                style="display: ${post.displayNew};"></i></h2>
                                     </div>
                                     <div class="col-xl-2 col-lg-3 col-2 text-center content-writer font-dongle">
                                         <h2>${post.writer}</h2>

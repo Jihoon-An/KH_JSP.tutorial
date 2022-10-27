@@ -9,6 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommentDAO {
+    private static CommentDAO instance = null;
+
+    synchronized public static CommentDAO getInstance() throws Exception {
+        if (instance == null) {
+            instance = new CommentDAO();
+        }
+        return instance;
+    }
+
+    private CommentDAO()  {}
 
     /**
      * delete comment from comments table.
@@ -50,7 +60,7 @@ public class CommentDAO {
 
     /**
      * update comment in comments table.
-     * @param dto for contents, commentNum.
+     * @param dto to contents, commentNum.
      */
     public void modify(CommentDTO dto) throws Exception{
         String sql = "UPDATE comments SET contents = ? WHERE comment_num = ?";

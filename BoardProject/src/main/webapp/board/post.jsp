@@ -17,6 +17,8 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
                 crossorigin="anonymous"></script>
+            <!-- animation -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
             <!-- font -->
             <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Yeon+Sung&display=swap"
                 rel="stylesheet">
@@ -133,7 +135,8 @@
                     </div>
                     <div class="col-10">
                         <c:forEach var="file" items="${files}">
-                            <div><a href="/files/${file.sysName}">${file.outNum}. ${file.originName}</a></div>
+                            <div><a href="/download.file?sysName=${file.sysName}&originName=${file.originName}">${file.outNum}.
+                                    ${file.originName}</a></div>
                         </c:forEach>
                     </div>
                     <textarea class="col-12" id="postContent" readonly>${post.content}</textarea>

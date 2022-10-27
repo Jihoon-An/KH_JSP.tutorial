@@ -66,9 +66,40 @@
                                         <input type="text" class="input" id="title" name="title"
                                             aria-describedby="basic-addon3">
                                     </div>
-                                    <div class="mb-2">
-                                        <input class="form-control m-0" type="file" id="formFile" name="file">
+                                    <div class="mb-2 row">
+                                        <div class="col-2">
+                                            <button id="fileAdd" type="button"
+                                                class="btn btn-outline-info mb-1">+</button>
+                                        </div>
+                                        <div class="col-10" id="fileInput"></div>
                                     </div>
+                                    <script>
+                                        let count = 0;
+                                        $("#fileAdd").on("click", function () {
+                                            if ($("input[type=file]").length > 4) {
+                                                alert("배불러!");
+                                                return;
+                                            }
+                                            
+                                            let fileDiv = $("<div>");
+                                            fileDiv.addClass("input-group mb-1");
+
+                                            let inputFile = $("<input>");
+                                            inputFile.attr("type", "file");
+                                            inputFile.attr("name", "file" + count++);
+                                            inputFile.addClass("form-control m-0");
+
+                                            let delBtn = $("<button>");
+                                            delBtn.html("X");
+                                            delBtn.attr("type", "button");
+                                            delBtn.addClass("border btn btn-light line-del");
+                                            delBtn.on("click", function () { $(this).parent().remove(); });
+
+                                            fileDiv.append(inputFile);
+                                            fileDiv.append(delBtn);
+                                            $("#fileInput").append(fileDiv);
+                                        });
+                                    </script>
                                     <div class="row">
                                         <span class="col-2 border border-info bg-light text-center">내용</span>
                                         <textarea type="text" class="input" id="content" name="content"
