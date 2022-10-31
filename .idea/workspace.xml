@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efed42c0-cdac-4677-94e0-8503a0847e70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/WEB-INF/lib/gson-2.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/AjaxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/java/controllers/ControllerAbs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/WEB-INF/lib/gson-2.10.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/BoardProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/BoardProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/ControllerAbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/ControllerAbs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/java/controllers/MembersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardProject/src/main/webapp/member/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/Jsp_tutorial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/ajax.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/ajax.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetflixManager/NetflixManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servers/Servers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Servers/Servers.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/ControllerAbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/controllers/ControllerAbs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BoardProject/controllers/MembersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BoardProject/controllers/MembersController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +61,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/BoardProject/src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Jsp_tutorial/src/main/webapp/WEB-INF/lib" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../우테코/java-onboarding" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
